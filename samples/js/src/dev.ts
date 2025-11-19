@@ -4,6 +4,7 @@ import { startAgentServers } from "./servers";
 
 async function main(): Promise<void> {
   loadEnv();
+
   const { stopAll } = await startAgentServers();
 
   const devtools = spawn("npx", ["@google/adk-devtools", "web", "."], {

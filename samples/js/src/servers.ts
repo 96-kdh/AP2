@@ -139,6 +139,7 @@ async function closeServer(server: StartedServer): Promise<void> {
 
 export async function startAgentServers(): Promise<{ stopAll: () => Promise<void> }> {
   loadEnv();
+
   const configs: AgentServerConfig[] = [
     {
       name: "Merchant Agent",
