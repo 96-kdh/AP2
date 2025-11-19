@@ -1,0 +1,3411 @@
+{
+  "id": "2d2962dd-ea50-4d1e-a92a-1aab710e4429",
+  "appName": "shopping_agent",
+  "userId": "user",
+  "state": {
+    "intent_mandate": {
+      "user_cart_confirmation_required": true,
+      "natural_language_description": "싸고 튼튼한 커피포트",
+      "merchants": [],
+      "skus": [],
+      "requires_refundability": true,
+      "intent_expiry": "2025-11-20T01:38:21.148336+00:00"
+    },
+    "risk_data": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data",
+    "shopping_context_id": "d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d",
+    "cart_mandates": [
+      {
+        "contents": {
+          "id": "cart_1",
+          "user_cart_confirmation_required": true,
+          "payment_request": {
+            "method_data": [
+              {
+                "supported_methods": "CARD",
+                "data": {
+                  "network": [
+                    "mastercard",
+                    "paypal",
+                    "amex"
+                  ]
+                }
+              }
+            ],
+            "details": {
+              "id": "order_1",
+              "display_items": [
+                {
+                  "label": "기본형 내구성이 뛰어난 커피포트",
+                  "amount": {
+                    "currency": "KRW",
+                    "value": 25000
+                  },
+                  "refund_period": 30
+                }
+              ],
+              "total": {
+                "label": "Total",
+                "amount": {
+                  "currency": "KRW",
+                  "value": 25000
+                },
+                "refund_period": 30
+              }
+            },
+            "options": {
+              "request_payer_name": false,
+              "request_payer_email": false,
+              "request_payer_phone": false,
+              "request_shipping": true
+            }
+          },
+          "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+          "merchant_name": "Generic Merchant"
+        }
+      },
+      {
+        "contents": {
+          "id": "cart_2",
+          "user_cart_confirmation_required": true,
+          "payment_request": {
+            "method_data": [
+              {
+                "supported_methods": "CARD",
+                "data": {
+                  "network": [
+                    "mastercard",
+                    "paypal",
+                    "amex"
+                  ]
+                }
+              }
+            ],
+            "details": {
+              "id": "order_2",
+              "display_items": [
+                {
+                  "label": "스테인리스 스틸 견고한 전기 커피포트",
+                  "amount": {
+                    "currency": "KRW",
+                    "value": 32000
+                  },
+                  "pending": false,
+                  "refund_period": 30
+                }
+              ],
+              "total": {
+                "label": "Total",
+                "amount": {
+                  "currency": "KRW",
+                  "value": 32000
+                },
+                "refund_period": 30
+              }
+            },
+            "options": {
+              "request_payer_name": false,
+              "request_payer_email": false,
+              "request_payer_phone": false,
+              "request_shipping": true
+            }
+          },
+          "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+          "merchant_name": "Generic Merchant"
+        }
+      },
+      {
+        "contents": {
+          "id": "cart_3",
+          "user_cart_confirmation_required": true,
+          "payment_request": {
+            "method_data": [
+              {
+                "supported_methods": "CARD",
+                "data": {
+                  "network": [
+                    "mastercard",
+                    "paypal",
+                    "amex"
+                  ]
+                }
+              }
+            ],
+            "details": {
+              "id": "order_3",
+              "display_items": [
+                {
+                  "label": "간편하고 튼튼한 미니 커피포트",
+                  "amount": {
+                    "currency": "KRW",
+                    "value": 18000
+                  },
+                  "refund_period": 30
+                }
+              ],
+              "total": {
+                "label": "Total",
+                "amount": {
+                  "currency": "KRW",
+                  "value": 18000
+                },
+                "refund_period": 30
+              }
+            },
+            "options": {
+              "request_payer_name": false,
+              "request_payer_email": false,
+              "request_payer_phone": false,
+              "request_shipping": true
+            }
+          },
+          "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+          "merchant_name": "Generic Merchant"
+        }
+      }
+    ],
+    "chosen_cart_id": "cart_1",
+    "cart_mandate": {
+      "contents": {
+        "id": "cart_1",
+        "user_cart_confirmation_required": true,
+        "payment_request": {
+          "method_data": [
+            {
+              "supported_methods": "CARD",
+              "data": {
+                "network": [
+                  "mastercard",
+                  "paypal",
+                  "amex"
+                ]
+              }
+            }
+          ],
+          "details": {
+            "id": "order_1",
+            "display_items": [
+              {
+                "label": "기본형 내구성이 뛰어난 커피포트",
+                "amount": {
+                  "currency": "KRW",
+                  "value": 25003.5
+                },
+                "refund_period": 30
+              },
+              {
+                "label": "Shipping",
+                "amount": {
+                  "currency": "USD",
+                  "value": 2
+                },
+                "refund_period": 30
+              },
+              {
+                "label": "Tax",
+                "amount": {
+                  "currency": "USD",
+                  "value": 1.5
+                },
+                "refund_period": 30
+              }
+            ],
+            "total": {
+              "label": "Total",
+              "amount": {
+                "currency": "KRW",
+                "value": 25003.5
+              },
+              "refund_period": 30
+            }
+          },
+          "options": {
+            "request_payer_name": false,
+            "request_payer_email": false,
+            "request_payer_phone": false,
+            "request_shipping": true
+          },
+          "shipping_address": {
+            "city": "Sample City",
+            "country": "US",
+            "organization": "Sample Organization",
+            "phone_number": "+1-000-000-0000",
+            "postal_code": "00000",
+            "recipient": "Bugs Bunny",
+            "region": "ST",
+            "address_line": [
+              "123 Main St"
+            ]
+          }
+        },
+        "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+        "merchant_name": "Generic Merchant"
+      },
+      "merchant_authorization": "eyJhbGciOiJSUzI1NiIsImtpZIwMjQwOTA..."
+    },
+    "shipping_address": {
+      "phone_number": "+1-000-000-0000",
+      "country": "US",
+      "recipient": "Bugs Bunny",
+      "organization": "Sample Organization",
+      "address_line": [
+        "123 Main St"
+      ],
+      "city": "Sample City",
+      "postal_code": "00000",
+      "region": "ST"
+    },
+    "payment_credential_token": {
+      "value": "fake_payment_credential_token_0",
+      "url": "http://localhost:8002/a2a/credentials_provider"
+    },
+    "payment_mandate": {
+      "payment_mandate_contents": {
+        "payment_mandate_id": "726348364a91446aaa9a0bd27e6fe8fb",
+        "payment_details_id": "order_1",
+        "payment_details_total": {
+          "label": "Total",
+          "amount": {
+            "currency": "KRW",
+            "value": 25003.5
+          },
+          "refund_period": 30
+        },
+        "payment_response": {
+          "request_id": "order_1",
+          "method_name": "CARD",
+          "details": {
+            "token": {
+              "value": "fake_payment_credential_token_0",
+              "url": "http://localhost:8002/a2a/credentials_provider"
+            }
+          },
+          "shipping_address": {
+            "city": "Sample City",
+            "country": "US",
+            "organization": "Sample Organization",
+            "phone_number": "+1-000-000-0000",
+            "postal_code": "00000",
+            "recipient": "Bugs Bunny",
+            "region": "ST",
+            "address_line": [
+              "123 Main St"
+            ]
+          },
+          "payer_email": "bugsbunny@gmail.com"
+        },
+        "merchant_agent": "Generic Merchant",
+        "timestamp": "2025-11-19T01:41:51.359061+00:00"
+      }
+    },
+    "signed_payment_mandate": {
+      "payment_mandate_contents": {
+        "payment_mandate_id": "726348364a91446aaa9a0bd27e6fe8fb",
+        "payment_details_id": "order_1",
+        "payment_details_total": {
+          "label": "Total",
+          "amount": {
+            "currency": "KRW",
+            "value": 25003.5
+          },
+          "refund_period": 30
+        },
+        "payment_response": {
+          "request_id": "order_1",
+          "method_name": "CARD",
+          "details": {
+            "token": {
+              "value": "fake_payment_credential_token_0",
+              "url": "http://localhost:8002/a2a/credentials_provider"
+            }
+          },
+          "shipping_address": {
+            "city": "Sample City",
+            "country": "US",
+            "organization": "Sample Organization",
+            "phone_number": "+1-000-000-0000",
+            "postal_code": "00000",
+            "recipient": "Bugs Bunny",
+            "region": "ST",
+            "address_line": [
+              "123 Main St"
+            ]
+          },
+          "payer_email": "bugsbunny@gmail.com"
+        },
+        "merchant_agent": "Generic Merchant",
+        "timestamp": "2025-11-19T01:41:51.359061+00:00"
+      },
+      "user_authorization": "fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"
+    },
+    "initiate_payment_task_id": "bd09d161-dd72-440f-895a-a542c257e762",
+    "payment_receipt": {
+      "payment_mandate_id": "726348364a91446aaa9a0bd27e6fe8fb",
+      "timestamp": "2025-11-19T01:43:02.364171+00:00",
+      "payment_id": "b8b4292687484d5692042b4ec6cd7963",
+      "amount": {
+        "currency": "KRW",
+        "value": 25003.5
+      },
+      "payment_status": {
+        "merchant_confirmation_id": "b8b4292687484d5692042b4ec6cd7963",
+        "psp_confirmation_id": "b8b4292687484d5692042b4ec6cd7963"
+      },
+      "payment_method_details": {
+        "method_name": "CARD"
+      }
+    }
+  },
+  "events": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "100달러 미만의 커피포트를 구입해줘"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-a388de3c-3cbd-4d10-a27c-ea2de2de9683",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "ce161831-ebe1-4733-b9b6-58ce4480fc1c",
+      "timestamp": 1763516279.654465
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CscBAdHtim9Ekvq8XI5hlKA5wo-lCPPkQetQXKP3dm0KeERTHf1Ngi41DjcaCHYL_AwDVDcSFVlX9c_CXw-NOsCoXm3_x_56kSDrrTCSkcArYFrznXwsFxZy_zA4Ssl4W3QqOC-XTxP2xcnf-EgNoCVdctkdyGemvMtvS6Ebh21mmRPBA9_-TKLbTAUgD65YdEQH_IJmyNgeMbC6Q8kpKIcmy5b3_ulL2QScv9-w5hAl3HRjBKUroZDvwBiVa-kZatJMyYNfgv_cSg==",
+            "functionCall": {
+              "id": "adk-ea94e298-7dec-4914-9ccb-d3e36b8546c9",
+              "args": {
+                "agent_name": "shopper"
+              },
+              "name": "transfer_to_agent"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 20,
+        "promptTokenCount": 2364,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2364
+          }
+        ],
+        "thoughtsTokenCount": 44,
+        "totalTokenCount": 2428
+      },
+      "invocationId": "e-a388de3c-3cbd-4d10-a27c-ea2de2de9683",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "0ffc93fc-2893-42ac-86d6-a4fe6ba3613f",
+      "timestamp": 1763516279.656008
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-ea94e298-7dec-4914-9ccb-d3e36b8546c9",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-a388de3c-3cbd-4d10-a27c-ea2de2de9683",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "shopper",
+        "requestedAuthConfigs": {}
+      },
+      "id": "c15ef2cd-8d65-41dd-9fcb-25fc90b8a820",
+      "timestamp": 1763516281.994947
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CvYBAdHtim9r-fkFWt4WW9Sct7VkycQjY5HuVEHlMbqq5Y0s1u9PVuamw6npEVBq06i-NSk3D5Tqbe7vbxzAi4J5iSJi2J7xL2p8AO46DmB0KqjPFRSaSZKdKr9Ywfoefgj-Qvk0P7sjh0zW055Z7oAnsSsFnu9csrIJdt-O-DgvHnrGkWG4NPHdh2Pd29p7cJAmK7lNjmz_v54oZgZZbJgokdEUrnBY6_tw8aFOZ0986OIRhcxvLWBlRvSjvAi7jukVGGzcXnznIIXd4oDVMLt9r3_i4q5GPNVfXUurqhbHo4lDXw8W3N6AR41iNpxQTmSP4ntDVAUc",
+            "text": "커피포트를 구매하시려는군요. 100달러 미만의 커피포트에 대해 더 자세히 알려주세요. 특별히 찾으시는 브랜드나 기능이 있으신가요?"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 42,
+        "promptTokenCount": 1895,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1895
+          }
+        ],
+        "thoughtsTokenCount": 50,
+        "totalTokenCount": 1987
+      },
+      "invocationId": "e-a388de3c-3cbd-4d10-a27c-ea2de2de9683",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "40def35b-1692-41a2-8b27-39859bcfd49f",
+      "timestamp": 1763516281.996053
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "아니야 없어 싸고 튼튼한걸로 니가 추천해줘. "
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-0f8ca33a-6752-41c5-b5a5-f9e333615a56",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "09fa8c9f-41b7-4a3e-9b9a-34d73c2d5742",
+      "timestamp": 1763516297.882205
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CrsKAdHtim-vpe5XFv026qnexkwe53OKlwGz6fXm5OuYMxBrVl9LXv5YX2VHLY43fYFIM-CzpiqBFwk0egDt5UeBI-QIvJOBa0ydUb_F_VyeNJ4Z5fs3WYuAoSy_a1DVwZw8RDCkw5ZEnId8dWOJUGr3TKwjbUDwC6sJJ_V8RZeCQutox4HlhOLWqYFpBZLKQy9Tw64vhF5L1mjVMlnnR4W3XBbODNQwTSRtxp12ahQrSdrlPmtljwRcMDV9mmIphOyupo04VZMYkqSBDzEIzXpIn6gSgfBZZFfgbu0jKghTdz_3b4iaHsRFdrwx61hyATHwivLjJmGOXRZIX2tNPurkibJuvwXoRKa8P5k_bKdidmgq_svFBllRNQyLdcqewBTOPcyHdjIRwfe1pd8DwOfO8Z_n5CyuJ8o_KAruxBqbLs-iUv2RNVE371H11p8pfz8YBd-zRxzeEGCLXTyWRF7tjJNG6sDQA6pr4k-Vy5D-mwKfnpHMMQQ6Y5zFP7BNWa1jZGvjWE9hnYHNN2hagQp8SkjiClKaWi9_qpkYddr2DDYPOB5zp16lC66B50FHTAwjC4vUTVbqgqAxoW0ttmGi4EsOIzDLLScpdqxtB-IOAK1jkalAhtSmnU9EMyZDJQ-zTwv_8U0RWaLvE3O_OpADahYwPXMUp4ErKARLRV0-cfRsiO81qwbNXbx703pl456FRaYqgzLVZYtsZlpn-c_mjvWpZekh7TOKq7Xc4osBMgtO00NXYjaSR7_oTT74BVA3p-rWoF_zXOrSj98c5lUPfhiY-Mmc8hO7b4jnSIDpj47_egshwv6_2iWnU1W6t_xXVR4ddUXYTJpA8dVR063RsR65dxUGVTFZ4dRz5CcVwSGJV1saPGEC1aU_vxooEuBefmwqomSFCICK8O0dVZSV20T6Vt8nOEup-vOI1wj92FCPQqG-mojVm-kXYF_MbBIxOkh794qhYxqwZKPHNRDEvSk1Dui24veWaf1SOXcwepMo3XSwdebKKAvXGYmf1reYgQ0xaCgOjhNy_snwoyjg5KhUK6J1-5cPYEE33wEjMBGXYjXMfz2APvxr95JO8XAIrG9aQKOeVoGydkevB33HG8htCKTfz989L0vmIXKzamhIdOtT_mocIREcsdHQq1-P-rsNIkrYdpr53pfddQtpNDUufwZgmKBPMgqq52oA-byWzCzvRp1RvZjaP7pioSQISt3b7XtigMqICIuzHHgcXMAn9OKgO_6J6h4JHChDbf7LIS-BRqazHBXigmL-eYim0tgi32kkCBfUhSPl9b-OyqDYo9pWYsAhHNV5XHQ4-5BHZJIqC-uXRI5zDO4NRfVHGjN52SOCwfRWc5HO0Mu5-HBX0f1JN60eei-kjp5wouXpnNcE6sQ1urrnyCUjDVi7aRyG1l-WDgAlrlFDrJNTzPd6030Ta7SXiaxXz0yepHmJFbjGgaPGJ_ita0xfTmbc1Jxi0zYT2Vj3m0685kPr0jk1kJ4GwVMMoPR9JhUThi6pBGtgFzY0o4qdfa3jKRKzGrT4MJ86d0_bytMjr4gfrFH5EIc0VVQtmkMPUMtw0Ey2i6ZeYLbEtjRYrruAkT6DQJgjXCkpEvC1OCrpxabJ888DfYafreOKyniQ9ieQpBrVvOvxxHixAzaZcwE75yo5vgt57kmP-3rQZTH2ln-QCOw8L7IZwvuqV39fFmoOBnM53jyA0GVAZNq2rut6KjeorAh9CMA-u_FgEnJHIjNdYqQ8ItfQcj8dyYq3vkdBJPeK1ddeorP9ItZ3lg==",
+            "functionCall": {
+              "id": "adk-87792dd4-0f45-427d-94d4-106e1fe832a1",
+              "args": {
+                "user_cart_confirmation_required": true,
+                "merchants": [],
+                "skus": [],
+                "requires_refundability": true,
+                "natural_language_description": "싸고 튼튼한 커피포트"
+              },
+              "name": "create_intent_mandate"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 55,
+        "promptTokenCount": 1958,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1958
+          }
+        ],
+        "thoughtsTokenCount": 336,
+        "totalTokenCount": 2349
+      },
+      "invocationId": "e-0f8ca33a-6752-41c5-b5a5-f9e333615a56",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "761dbb48-7da5-4cd4-bf2b-4eb34ce0a946",
+      "timestamp": 1763516297.882976
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-87792dd4-0f45-427d-94d4-106e1fe832a1",
+              "name": "create_intent_mandate",
+              "response": {
+                "result": {
+                  "user_cart_confirmation_required": true,
+                  "natural_language_description": "싸고 튼튼한 커피포트",
+                  "merchants": [],
+                  "skus": [],
+                  "requires_refundability": true,
+                  "intent_expiry": "2025-11-20T01:38:21.148336+00:00"
+                }
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-0f8ca33a-6752-41c5-b5a5-f9e333615a56",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {
+          "intent_mandate": {
+            "user_cart_confirmation_required": true,
+            "natural_language_description": "싸고 튼튼한 커피포트",
+            "merchants": [],
+            "skus": [],
+            "requires_refundability": true,
+            "intent_expiry": "2025-11-20T01:38:21.148336+00:00"
+          }
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "f7362304-64ef-4676-af92-38f42295f7ca",
+      "timestamp": 1763516301.148387
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Please confirm the following details for your purchase. Note that this information will be shared with the merchant.\n\nItem Description: 싸고 튼튼한 커피포트\nUser Confirmation Required: Yes\nMerchants: Any\nSKUs: Any\nRefundable: Yes\nExpires: in 1 day\n\nShall I proceed?"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1502
+          }
+        ],
+        "cachedContentTokenCount": 1502,
+        "candidatesTokenCount": 66,
+        "promptTokenCount": 2114,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2114
+          }
+        ],
+        "totalTokenCount": 2180
+      },
+      "invocationId": "e-0f8ca33a-6752-41c5-b5a5-f9e333615a56",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "f6813cc7-b02b-4d6a-9171-432cd332a907",
+      "timestamp": 1763516301.149903
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "yes"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-810d877f-7534-4208-8668-be53db5a2c9c",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "abaa6b8e-4bc2-450d-bd06-91c507801a19",
+      "timestamp": 1763516314.548916
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-6a562de1-9108-41ee-9fb1-6bbe2ee1fb45",
+              "args": {
+                "debug_mode": false
+              },
+              "name": "find_products"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 16,
+        "promptTokenCount": 2183,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2183
+          }
+        ],
+        "totalTokenCount": 2199
+      },
+      "invocationId": "e-810d877f-7534-4208-8668-be53db5a2c9c",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "51ddea08-8a61-4043-9274-87a48d9e6286",
+      "timestamp": 1763516314.549858
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-6a562de1-9108-41ee-9fb1-6bbe2ee1fb45",
+              "name": "find_products",
+              "response": {
+                "result": [
+                  {
+                    "contents": {
+                      "id": "cart_1",
+                      "user_cart_confirmation_required": true,
+                      "payment_request": {
+                        "method_data": [
+                          {
+                            "supported_methods": "CARD",
+                            "data": {
+                              "network": [
+                                "mastercard",
+                                "paypal",
+                                "amex"
+                              ]
+                            }
+                          }
+                        ],
+                        "details": {
+                          "id": "order_1",
+                          "display_items": [
+                            {
+                              "label": "기본형 내구성이 뛰어난 커피포트",
+                              "amount": {
+                                "currency": "KRW",
+                                "value": 25000
+                              },
+                              "refund_period": 30
+                            }
+                          ],
+                          "total": {
+                            "label": "Total",
+                            "amount": {
+                              "currency": "KRW",
+                              "value": 25000
+                            },
+                            "refund_period": 30
+                          }
+                        },
+                        "options": {
+                          "request_payer_name": false,
+                          "request_payer_email": false,
+                          "request_payer_phone": false,
+                          "request_shipping": true
+                        }
+                      },
+                      "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+                      "merchant_name": "Generic Merchant"
+                    }
+                  },
+                  {
+                    "contents": {
+                      "id": "cart_2",
+                      "user_cart_confirmation_required": true,
+                      "payment_request": {
+                        "method_data": [
+                          {
+                            "supported_methods": "CARD",
+                            "data": {
+                              "network": [
+                                "mastercard",
+                                "paypal",
+                                "amex"
+                              ]
+                            }
+                          }
+                        ],
+                        "details": {
+                          "id": "order_2",
+                          "display_items": [
+                            {
+                              "label": "스테인리스 스틸 견고한 전기 커피포트",
+                              "amount": {
+                                "currency": "KRW",
+                                "value": 32000
+                              },
+                              "pending": false,
+                              "refund_period": 30
+                            }
+                          ],
+                          "total": {
+                            "label": "Total",
+                            "amount": {
+                              "currency": "KRW",
+                              "value": 32000
+                            },
+                            "refund_period": 30
+                          }
+                        },
+                        "options": {
+                          "request_payer_name": false,
+                          "request_payer_email": false,
+                          "request_payer_phone": false,
+                          "request_shipping": true
+                        }
+                      },
+                      "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+                      "merchant_name": "Generic Merchant"
+                    }
+                  },
+                  {
+                    "contents": {
+                      "id": "cart_3",
+                      "user_cart_confirmation_required": true,
+                      "payment_request": {
+                        "method_data": [
+                          {
+                            "supported_methods": "CARD",
+                            "data": {
+                              "network": [
+                                "mastercard",
+                                "paypal",
+                                "amex"
+                              ]
+                            }
+                          }
+                        ],
+                        "details": {
+                          "id": "order_3",
+                          "display_items": [
+                            {
+                              "label": "간편하고 튼튼한 미니 커피포트",
+                              "amount": {
+                                "currency": "KRW",
+                                "value": 18000
+                              },
+                              "refund_period": 30
+                            }
+                          ],
+                          "total": {
+                            "label": "Total",
+                            "amount": {
+                              "currency": "KRW",
+                              "value": 18000
+                            },
+                            "refund_period": 30
+                          }
+                        },
+                        "options": {
+                          "request_payer_name": false,
+                          "request_payer_email": false,
+                          "request_payer_phone": false,
+                          "request_shipping": true
+                        }
+                      },
+                      "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+                      "merchant_name": "Generic Merchant"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-810d877f-7534-4208-8668-be53db5a2c9c",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {
+          "risk_data": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data",
+          "shopping_context_id": "d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d",
+          "cart_mandates": [
+            {
+              "contents": {
+                "id": "cart_1",
+                "user_cart_confirmation_required": true,
+                "payment_request": {
+                  "method_data": [
+                    {
+                      "supported_methods": "CARD",
+                      "data": {
+                        "network": [
+                          "mastercard",
+                          "paypal",
+                          "amex"
+                        ]
+                      }
+                    }
+                  ],
+                  "details": {
+                    "id": "order_1",
+                    "display_items": [
+                      {
+                        "label": "기본형 내구성이 뛰어난 커피포트",
+                        "amount": {
+                          "currency": "KRW",
+                          "value": 25000
+                        },
+                        "refund_period": 30
+                      }
+                    ],
+                    "total": {
+                      "label": "Total",
+                      "amount": {
+                        "currency": "KRW",
+                        "value": 25000
+                      },
+                      "refund_period": 30
+                    }
+                  },
+                  "options": {
+                    "request_payer_name": false,
+                    "request_payer_email": false,
+                    "request_payer_phone": false,
+                    "request_shipping": true
+                  }
+                },
+                "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+                "merchant_name": "Generic Merchant"
+              }
+            },
+            {
+              "contents": {
+                "id": "cart_2",
+                "user_cart_confirmation_required": true,
+                "payment_request": {
+                  "method_data": [
+                    {
+                      "supported_methods": "CARD",
+                      "data": {
+                        "network": [
+                          "mastercard",
+                          "paypal",
+                          "amex"
+                        ]
+                      }
+                    }
+                  ],
+                  "details": {
+                    "id": "order_2",
+                    "display_items": [
+                      {
+                        "label": "스테인리스 스틸 견고한 전기 커피포트",
+                        "amount": {
+                          "currency": "KRW",
+                          "value": 32000
+                        },
+                        "pending": false,
+                        "refund_period": 30
+                      }
+                    ],
+                    "total": {
+                      "label": "Total",
+                      "amount": {
+                        "currency": "KRW",
+                        "value": 32000
+                      },
+                      "refund_period": 30
+                    }
+                  },
+                  "options": {
+                    "request_payer_name": false,
+                    "request_payer_email": false,
+                    "request_payer_phone": false,
+                    "request_shipping": true
+                  }
+                },
+                "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+                "merchant_name": "Generic Merchant"
+              }
+            },
+            {
+              "contents": {
+                "id": "cart_3",
+                "user_cart_confirmation_required": true,
+                "payment_request": {
+                  "method_data": [
+                    {
+                      "supported_methods": "CARD",
+                      "data": {
+                        "network": [
+                          "mastercard",
+                          "paypal",
+                          "amex"
+                        ]
+                      }
+                    }
+                  ],
+                  "details": {
+                    "id": "order_3",
+                    "display_items": [
+                      {
+                        "label": "간편하고 튼튼한 미니 커피포트",
+                        "amount": {
+                          "currency": "KRW",
+                          "value": 18000
+                        },
+                        "refund_period": 30
+                      }
+                    ],
+                    "total": {
+                      "label": "Total",
+                      "amount": {
+                        "currency": "KRW",
+                        "value": 18000
+                      },
+                      "refund_period": 30
+                    }
+                  },
+                  "options": {
+                    "request_payer_name": false,
+                    "request_payer_email": false,
+                    "request_payer_phone": false,
+                    "request_shipping": true
+                  }
+                },
+                "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+                "merchant_name": "Generic Merchant"
+              }
+            }
+          ]
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "2d29779a-7fa8-43bb-b65a-b087c767fadc",
+      "timestamp": 1763516322.644963
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "Co8TAdHtim96ky03EaS3SAvkluowaemBhVilxCWDI6ADhqvUkorRAiWN84zvCn6hK91cLDBnFUSLQvvJPB0WGv_VPbDZMaYw4d3f3wNJHeOpn7EoxbXnZ3V8t7J89ZBIadSZ_MEFiMLMRSOj48SYFnTXRkbigx7tNdSfxYWufhSFpmZGUNVtFNwEez09omXg2-frGuPpt-8iKfyBlz2DJG9LVLnfgZVM7FAdsXLLcVKrkzCRuAqt07aO2NyTlYjYntdjxSn9Bu2bYS3bw4BCcBrGe8hxke18xdaWTNxIM7iRK5GgEjqU1YvCNNswpu8AI-Ts8p_W_ihIdEyj1i81xmlXxiW_4t3_yL3e5knEOOcIUoPkVsZdw3CW2g8IKOOQWpY5nv5hLv6rKta1TplGMibzti_onxAJqmQ4v1VQTQtSmHBEazsWoQgrDjG8a0uEGKnIr75yHLpPYB5Nio6zpax3fXGNLV7QbD6ZvXERr06kSwm6nzuGuJmT02dFSSQL2oeQwBFgiX8c4dvRwVnHxUecONrPkYKvfIpVblOK5Pt1E0Yonh_1Jmda9Fjgi46GEWY0JagoR5W0r1_zXodKulQfWv8nlor44fpgNdC5DBCmpXrfQfiwaHSJUm6v4fJbp2QnDnGxF_6qiiC2Tlv-L9fQon0uNpjQ71yCCWAy3A5iKfMOELROMscs5QBviGvEw1Z7LC_Tgy35OyDeT9YR05fzcwfGb8enLrZDtyRIhfsbVsM1Nmu7POURJLxUYIIi0ukVYUmMLmWML94_rQ3VakCDnonnBDbekKFoVXyT-kQIu8IxPref_frDiU3nZpoB5P8WIvO-byOT9Zhm7un8Xtzcdk3Tg9l-0Ao0WUWcXrtpFChBtYnmslGhzD5JFwRuuK6_hX9aDhuS9VLRyCrkyjkqrq3O8HNwnyrRUCkhFGsXT-orqFzJ2ytDKr2cn5EIxkgbsLczByoR9vU7agKl304UaIdbk5OwRy6L1wVZ5yJQA5xnXARIW4pWHI6DRs1MYdEPssF35Y4pi1i0KdHGUMOglluyFwMKGO5zIXFiyQ9VTQ7oVvjROueDphZK_pq3bRwLWx_ct4FO2WgY1kS-A2E-sWpmrIZy3kc8OzNLmzh2EnAAfl81tojtkxMimKa4P47-FHQOyJkt4fFr2QymSz2abj17mIAEkmomXTbsfk9Q0HswJkAeXGK0r2xeuqgFiKvRPAPW1WmSGrYZTdqBBKiCbx0_5DPKzjcEUGD80jFUIOpiwym0JkyTkGY9D7cQlfDaIj-X5xMblTVDj5SG3F00dyuRtg92DHwKuAW1xOYLeibhpllcfYtRGiwxKNXiJL-px9ysVTcMZiV4rZqynEK-ERUhwtxfgoD4UXT_DWYZnqOIrgG2VVaoRPsJj7wFcgZbUKEw2QFURwjNZv45lAa54gUtQ-hWXrwYUYJTb4dgRW-enVb6w3ZczXBIsQDTi_RWfhJmsxSyjRXOOIDLcSDlsqmUXiQijMkJD1H9R7B12vjQj-nBjdgy29yMli3TBRmHGc-qKRuEE7RrKV5KOSldWUSfxH5JrFGauzO-bLq7-StuEneEl4l_SYb9h3TR96SYpUyoaLvpISQqtgcZUcEDg7ojYUKKLRyzesZMPvq2gYLyH5Md-R5pdWSBlLyGqcUGD2nFMbiQ5H4IMNKlyKlJfQAO3JlHKRSvqw4jHqBnlIZrqoM_U1YF4e6ljCFRJVFYicVDcHkUC6HSpt0oPoBwtAFshRqrfCl68bqJ3rbVnGj8qbs7dz5RMiZKqoNYvcIujUdHGHkp0GVvfWvlQ8ifD6fH1MGS9yIqoO0RTkDY8GPUU59RaF4boCd5SmHEEjEeL49BKGAbDBkzXK41MkSxMI2wpi1WA0bHerx4rrNUbbWrZzQ3dKdLCtQ2r7EYt0oO3zEqQFjUnYh9vR9cRJq_Yc2xEGrSn02N8Whf3zEWj7lTk5X9nduMOgRvDuo8aTiBS6pqfEye1d5obbmMtW7TQaEkkwonj2YOsrYh20i7oyrM27A0bb4TMcT8z3dg5zXemTvtdCRz92LvAaBQ44Z2oGfygmfINM061DF9Fy0M2rCvIcPc_xYs3rk1B02p8gIhR61QK5V5s2oLk8q1Y2DbZ6j4nxCsHKEZtwX9uP9lW4TpfurowkDHOPvB0AmFpMIWcfiL2P71sA_EoufKnr04WYIbR0Pl7aDLqAP0x5PvUnvgaclUbh4jY07mBKtTRL4j9aPKZS1BFdc1sTGoc2n-ylB413bEfO9z1-Oib1ZFfSicKz0raVOXuRHPJYIcPvMCJLHrbQ-1dBPM2yBES49s7miXjfezXXq5xtN_Ts1-zDcfA8VRI341aLkZ5_dRuRLRefvGPGTlGsZZDtIHtsusF8MPoEf3722cMR9-_wExbQ9QmEjw80PcsWqOi2cZ3HoAZJsBafmWY_tgy4NetAXHpLeBqgu9KyILJ6NdcJKlqnITwpm6VghuQPX0G47p5onOYQgphjL2b1ip5ho7GvpzeYc8NymNQe_uE01EcEdmOXHkti4CGEebqbnIUM7-kM9z0rf6b3-CCK97wcax6n0MDn47LljYrZiYcM2zpvlfgLWg1c5OWojhI2oLVUEUj6kAnkzBOUTkQITjPeoYkWpIM606PmMRLpKMfo4OqAMgExCC_Ls-zByqj1otEEB1FaZn-tGALgpO2mRaCwWkKx0HzbRPSGq1LNbmZOijLUn-_y3sg79uC4H1bvxtqZptDZGPJFewZLsH3Ljfj6_P2jfCEuJ4pQzY3jofUsM-XGbPn7vpAZK7ViOP9uG7m0yaG8s7uYWBSjPVcyfaNVX2E00Vu5Qa7_yqgBmT5Wq9Ta5ny8FxsooUFrj-oq0nBbDQFMRQvE-45Vf3QqhXf8W6SP_qVXcmyuPwX6e9YuxhBEML936zjRM0oi0B8sh0V0VGLyAWBJ_oFt5MTvrwsPxpCNluN27ity6iR2S45uhgqAPKWpUPCkKX4G0gb81r3WbWQf3EVGI_yHsibgjaKcHZxyE7wp04M1xwEEOSMNR9YSin5I_iZiMPnbVaSEIgG6E8ExcyeFT5Rp8IdFfUtBlbAgERhLFdKF0eV87j0LUGmAIR2QGxioDUahiO2Vvokx21UqLRzOjMnWe7qFzaqos4li9ZtugmUdwQrDOaJ4695k8wW-MDuZEU4UJbJI5zVUvX4U-Yl2kvk9wjdDtK9b3HLHsxbN_Cpl9RPQW1MbErb62-vCSflZuVs5MAG-gSlZ6w-24=",
+            "text": "고객님의 요청에 따라 다음과 같은 커피포트들을 찾았습니다.\n\n1.  **기본형 내구성이 뛰어난 커피포트**\n    가격: ₩25,000\n    만료: 내일 오전 2시 8분까지 (UTC)\n    환불 기간: 30일\n    *이 제품은 고객님께서 요청하신 '싸고 튼튼한' 조건에 가장 부합한다고 생각합니다. 합리적인 가격에 좋은 내구성을 갖춘 기본형 모델입니다.*\n\n2.  **스테인리스 스틸 견고한 전기 커피포트**\n    가격: ₩32,000\n    만료: 내일 오전 2시 8분까지 (UTC)\n    환불 기간: 30일\n\n3.  **간편하고 튼튼한 미니 커피포트**\n    가격: ₩18,000\n    만료: 내일 오전 2시 8분까지 (UTC)\n    환불 기간: 30일\n\n판매처: Generic Merchant\n\n어떤 상품을 구매하시겠습니까?"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 1776
+          }
+        ],
+        "cachedContentTokenCount": 1776,
+        "candidatesTokenCount": 248,
+        "promptTokenCount": 2945,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2945
+          }
+        ],
+        "thoughtsTokenCount": 833,
+        "totalTokenCount": 4026
+      },
+      "invocationId": "e-810d877f-7534-4208-8668-be53db5a2c9c",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "e7f189e4-3460-4a5c-9ff2-f1ae4e4303e4",
+      "timestamp": 1763516322.647305
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "기본형 내구성이 뛰어난 커피포트"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-ffd7ee64-3625-4707-98b6-8ba587465070",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "15156078-ef53-4d3a-ba62-5ccd4f9bdab1",
+      "timestamp": 1763516341.297842
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CvACAdHtim--fyxxDfJR-0GGXe74PbIkm6nXE8IpO__EPaa20-QrNaWOqetJPhBWzKKHdv6qRz6hK4_mP6Mf8dfgSFkSOtt7Bi0gvhRmXDQNbZVv8V1-NV_mqapDp0-OGCX8RRWfFwQRXsuD8XLHkHrFs9Sd9WTB4lpWoI-iJt1rBFRinzYQdKdGcw_jBZVjOR0Xa6pTK-TApQs2_JZEun0wrMZ8TYj12CKqi8UAhffr488YvzlhX7dHaDB63J9D76fEpf08u3zV91jNU62sWazYCxw40wkKiiIhogzoXKrIBM56encHP6klfubgRwtd14JGeUsf83bOzkfDqHy4LjcDa1tP0ObzFSFkTFDq6xvcww5EFXIpG8qWLI4u4Smcb_Cym3ys4hrebHexoPFHb5wWfISS-kTiieYJGf-56HLrVYS90_Cdg88lvrqr7EaYj9y0dXnzeo7aiQRO1PIvBAAjTYd-URInesrTChD_64c4oMQ=",
+            "functionCall": {
+              "id": "adk-33ba6b62-d9e3-4cf4-a7c5-86f1955c9189",
+              "args": {
+                "cart_id": "cart_1"
+              },
+              "name": "update_chosen_cart_mandate"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 24,
+        "promptTokenCount": 3206,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3206
+          }
+        ],
+        "thoughtsTokenCount": 94,
+        "totalTokenCount": 3324
+      },
+      "invocationId": "e-ffd7ee64-3625-4707-98b6-8ba587465070",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "b062d6ca-9604-4f62-9168-a791e1318548",
+      "timestamp": 1763516341.298875
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-33ba6b62-d9e3-4cf4-a7c5-86f1955c9189",
+              "name": "update_chosen_cart_mandate",
+              "response": {
+                "result": "CartMandate with ID cart_1 selected."
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-ffd7ee64-3625-4707-98b6-8ba587465070",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {
+          "chosen_cart_id": "cart_1"
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "91eeacb4-39f4-4dc8-b229-81d844ace226",
+      "timestamp": 1763516343.736617
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "선택하신 '기본형 내구성이 뛰어난 커피포트'로 주문이 성공적으로 업데이트되었습니다. 이제 결제 및 배송 정보 확인을 위해 다음 단계로 진행하겠습니다."
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2617
+          }
+        ],
+        "cachedContentTokenCount": 2617,
+        "candidatesTokenCount": 40,
+        "promptTokenCount": 3259,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3259
+          }
+        ],
+        "totalTokenCount": 3299
+      },
+      "invocationId": "e-ffd7ee64-3625-4707-98b6-8ba587465070",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "d8cb3fcb-28da-4273-b7f6-f770bb7e3876",
+      "timestamp": 1763516343.738369
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "yes"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c5f0a668-7580-48eb-a169-fdcc83b46773",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "0fc9150b-cc30-45f7-a585-6eb20ed9731e",
+      "timestamp": 1763516353.047528
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CtAEAdHtim-xo7UZiMQyensRADTX2DrKSmVVZkvZ656dEtiKFC3eLF4gxz2C1vI_htcoZIFbhZkOZdyvU23pNLjeUem60O7xGqn7_JwxdmOWflHXVl_I9Khh3L6GQ9JeMxEmvmTuteKwqPJpuIrAohbIM9NgdFkVxXiesbIGHZE_loNQBSc68SlO24ylvxV1fpWo2kwXtVC7E8KwUpCoo7dcb4q08xklKdLhCaxedDHiisihR4Pa6MYifaeslJqKiORD1ReOEzGBJj3ip0JIYG-rb95vNkaldWIueUDslamBpKP4egazfu1j5komLDEwU8HZieReQTkLMThh6eT55covq1Ys-TvKzGRR6in_61NrPnjZDhCVsZa6Hiw5EuFxXesaIKzcoVQjmrsrMoXoew8D7d3BeFaPZBjDENWYBpp7UW1BM9orzL7J0WxVO3nbeavBOVTTkGcJLgpC_2IPbVOH07W6OyHDvRKBmlyL0QkjBblxaE_QMCeBU9q8uGPbUfc6t4Z5O4E3M6sUrwo2LFZWCZa3ARs-eNxV-qalA9fgdbcBDZaJEA3-CXKlNPNWBWuIKt9TxHAgZn04deSXsAPyR9UhxgxTjHwwDSiCpTOXJhY9I0ri0M32beDXyMfRSBWZL8EUpnoXYZJwBT97lqvL-DwUmO47e4Yzb9RMFIORApE1Ll5G0_kFuGChzBscyAf9INH9hYnuxBW_HO1u_6j-GZoxGaZuoXkTI5niuz4QD6ycDEjv3DkZt0UOAya9QlNXeddZWk97KwPET9aVo7kUlQ==",
+            "functionCall": {
+              "id": "adk-b0ead975-9752-4c5c-8d08-09d9bf1bddf3",
+              "args": {
+                "agent_name": "root_agent"
+              },
+              "name": "transfer_to_agent"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2683
+          }
+        ],
+        "cachedContentTokenCount": 2683,
+        "candidatesTokenCount": 21,
+        "promptTokenCount": 3302,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3302
+          }
+        ],
+        "thoughtsTokenCount": 114,
+        "totalTokenCount": 3437
+      },
+      "invocationId": "e-c5f0a668-7580-48eb-a169-fdcc83b46773",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "2622a4e2-e71c-434b-aaf4-0aeb02910bec",
+      "timestamp": 1763516353.048638
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-b0ead975-9752-4c5c-8d08-09d9bf1bddf3",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c5f0a668-7580-48eb-a169-fdcc83b46773",
+      "author": "shopper",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "root_agent",
+        "requestedAuthConfigs": {}
+      },
+      "id": "fe9b47df-24e0-41fa-8b4b-9da396b0c4b4",
+      "timestamp": 1763516355.541346
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-f70ca588-c44b-468a-bb47-6687bb94d4e9",
+              "args": {
+                "agent_name": "shipping_address_collector"
+              },
+              "name": "transfer_to_agent"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 23,
+        "promptTokenCount": 4040,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4040
+          }
+        ],
+        "totalTokenCount": 4063
+      },
+      "invocationId": "e-c5f0a668-7580-48eb-a169-fdcc83b46773",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "e76ec509-e2b5-4203-b512-cfc2491c1574",
+      "timestamp": 1763516355.547874
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-f70ca588-c44b-468a-bb47-6687bb94d4e9",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c5f0a668-7580-48eb-a169-fdcc83b46773",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "shipping_address_collector",
+        "requestedAuthConfigs": {}
+      },
+      "id": "287df104-42ec-49d1-bf01-2d301d1f11ca",
+      "timestamp": 1763516357.66954
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Would you prefer to use a digital wallet to access your credentials for this purchase, or would you like to enter your shipping address manually?"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 27,
+        "promptTokenCount": 2779,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2779
+          }
+        ],
+        "totalTokenCount": 2806
+      },
+      "invocationId": "e-c5f0a668-7580-48eb-a169-fdcc83b46773",
+      "author": "shipping_address_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "224c6431-4fa6-46c0-adde-458a4dadfed5",
+      "timestamp": 1763516357.671253
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "digital wallet"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-a7ad9920-8551-459a-894e-e4d3690dd25e",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "c06cd863-d5be-418d-8d49-bab1a081a88f",
+      "timestamp": 1763516381.166535
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "What digital wallet would you like to use for this transaction?"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2701
+          }
+        ],
+        "cachedContentTokenCount": 2701,
+        "candidatesTokenCount": 12,
+        "promptTokenCount": 2810,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2810
+          }
+        ],
+        "totalTokenCount": 2822
+      },
+      "invocationId": "e-a7ad9920-8551-459a-894e-e4d3690dd25e",
+      "author": "shipping_address_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "6ed01a1a-a571-4986-8faa-3171cd784766",
+      "timestamp": 1763516381.168498
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "yes"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-1f7d6ec4-f475-411a-96ca-35128730c372",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "4a645afe-34f4-421c-bf59-0b0ef0fd9c43",
+      "timestamp": 1763516400.214681
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CvcFAdHtim_ujByib2VRzkUzeXaX9pDd9gtHI22OnLCic5VnPTEwlw6gZwzVZz6jvxXU21OTDwPcSpGMYBehqfLKd_ZV-A7bTadTs7FcBfQ4msm77-tJY6vLg8VBEOZiqQ8QkRciPcZLijIVJj_ymlm6GpgHt7FsAOTiVkfajZv5XJ8JcAqMOGv3irK4Puw-gr8-mDeHsOMXyWYUAuSFKws-VmM2oAVCDqSZ_5UOqUS9hGf2w2L2dfGNHknlXVuv5rv1qRUadyKhOSv_TtRNk9eZqz5LfHf-6ROYWF9xlUYwyqSnTngUlGIdxZGxdFz_8J8ejPg2cHbEhpKttQzQKbzBcTEwCsDTh4X9atYjOEeqyQUkeWEeoai-pKIhvLrk6HR-9LjQ_UFZjiOGEq_6Rid_pNQxaFTBavoWopj5-vReZg5a0uWB9TF81NhCfT39JJlwhlZtG_u-tAsuOtW0ZwnQbUMWBb0w-2mG6Y7ITfq0fLihN3a_OtzjAsTi_Q92ZFlbVBr4-wBr4MFNaaTpbEDigFLHv2bkc7CD1U87dvEGGdPT04p74UaQ0usDAUvTFSqENrPx6pPAb9lUKsVwcbqBBQVydJr7MsWPg8083s65fOvi3GmHpejwpYD1In5t2rq-yJtj-9FBreZcrLvqTLT9qVcidgFAb8b-oVmvH8fAUOXA8KYkHSD-dc5EUHJnsU65PJpBR4NpD-t8Zf3K1jpgNIRmUYFGDL0IHK2AMaGRDQKz-eA8N2wIMAsDeKveH0W9rKAuNDF1FI6zxLF8cWsR1_Qho74o3QoOwSAz8tmTcaYZoJggh-jKXJdDVHDydWT0NTxFuW0mYukv3nC6jExDcCslcEPQ8eUInYxTs7jrxBLIsM7sNhRuovEK97uOav_jr_NjgW89DS0Qt8SEbCGjLSC529Likpye-si4eKXNhF14SGVCvEvkUEuN5N4D2mkVvfqxNSo6mseYcAbi5-JTEZp4sExNTecPyQBI3ZUhOPI63V6vrLbG",
+            "text": "What digital wallet would you like to use for this transaction?"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2696
+          }
+        ],
+        "cachedContentTokenCount": 2696,
+        "candidatesTokenCount": 12,
+        "promptTokenCount": 2825,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2825
+          }
+        ],
+        "thoughtsTokenCount": 154,
+        "totalTokenCount": 2991
+      },
+      "invocationId": "e-1f7d6ec4-f475-411a-96ca-35128730c372",
+      "author": "shipping_address_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "1269cc12-8df4-406b-a0bd-ba47f2cca41d",
+      "timestamp": 1763516400.215711
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "yes"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-9fa58975-acbf-43ec-bb8d-9f97af5dea4b",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "1a680dbe-3f02-4b12-9f4d-d09eff3b52b4",
+      "timestamp": 1763516405.643425
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CsoKAdHtim-gm15tXobty-xPbPRMaKIdP7wEfHYfygwvNZq-yuSgy5wvAbFwATslK-zlgktvjwhgxG1AGO8I_2W49VbHGxSbLxFWqpq43rLjd2czmRrMcMFs6X32UwfgNjS4Ei0DGJnByQ4xvHoBSqPtHeJcjKQcXGuFrVF5a77SNWTMQXEZ4Jm8X_I_jDH0ZuzUSNtTlYyNw3FM7VrHKsC01kRNB5ObQn1CqxscFeJaiIWlmCHTDswrNA_dSTMEFFZjcBaivJu1lWhhPfmdoYTUvCaR8zFYyWGLQZtWsRJPlyXMe3moENP139q9d2x4az8hKbI6xjgDJFYqqDBpkxrAgWfRvap8oFq8RODxppSSWg01Z0reWQIvsvLftKzxqVcubzwI53i5gfWJkTp0bgI4B8IfpIsiiTXfNP2I_20dwV9SLB5Vw-q5RCspHL4ONOkfx-0MgglBfiH6czK2fN7aX8E9UNjha6G5VHPJPPn6jtwOSRCGW45GPlALLcw298TDpmEePn5SQwOy-uS8UavS6uwkhA039G1UgoIw7LpafEiLBqhpiWUIBTenSZZsgaWVBEywVT5rXIxQJWSSXtuQFZp7j5YswSF6ebzxdn9lvtmD-7Og83fLewpawqq9MXFmRk_QugWsBNcFl_fz8gVYeM6lpISYkAxDLBhl9Jt8LCAdeEQdW4S0ZEM3OWv14HX4CZF3a8Yhl1HLNzgNPkvByejnZrvtlMiIYRWwhPC4O4kMsXNEe-0hcoIgKt0XD0CzQNvBCxHX11w1joWgw8qsYdPKTWdya3Ik8Ia-w-L4M_VjW0zK96X1WWleXVBskoZT-uR2zCoOQ6QDnzmALc9Wi65XA86V0RGIuEq0SgoMCQPo86Xn5RD0ckNr9cFyqTeM-Jv4FszTOrYQxS5UUT5QhCsIaJIwsrAJZ4o27frBd7p4Q1FYplMdtpFjdzX5loT9xRI7ZXe5de1vUzU5hdvI8pv8cjBz4hBuuv9xX37pdOeqDlkMnllOceYSY-qt2iGWQdcZxG5JEG91br2GIOhk-DhAs66-NRDnbKxXFRc03pwLk4AMKqfII5TtHBBWQMvcBrA5md0_IGIIMreoG2D8FESPZTCQLSyu3AsejWqCLPyyasR5JO07GO9GLPeP0fMqoNY3DCy8UddXu25L4gFbwSsPDkUtTe7n5dJ_cHBfNS8tmyG1PUzgeNaxltQeK6URwK499n96W7LtBBM6d9CP6sgqnoIHqMuwVYlKXHo8TEr6QYWHlYui0S5Az565R9WKfMYTwOK8oNvpJBO_adykEUHNmV26vxdyGkjIXFIX06tzZu0lBxxU0ZNR7TuiYnDzWtv3J2daS99C8-V0IzR7kBdntjrcBTkRRnrpXStzo6qbkNe8Zejn3DUidGRF-tTtqEfBWeajdmJfc8SnvqGuEba37pY_ZeYtn4kwnQ_wqtbn8W12eBfbMN_muEJZKvoPae9FkazfECS3rgaIRqzv_f5pS8ntP3GyRUSsmLfO-I4y43N11t_4Ps-2ou2q7wckrAmkSkhE192NqvrdybyahfKchxXhf6OEQUtS63VzI_Ywc7uo67tTuNvRPq92oogoHfeDaPVOlJ09JwIGnYCW2duVIfA097cNLmJcqxMAlnnalZf1FbVb1Bt_kEh4HH0WasZNfjNEyGa_mRNNQBevhRocy4IlXn84gyz0oaDomLGdu8WGPxa9B2jXCNByj4zLcxgqO0O8OsLVgYX-fpKWHQpNRBdXbrA9WS4cxjxceMnPmIhJA9mTomYEKLoR_rKdH2O5IAHq3SJBTQ==",
+            "text": "Please tell me the name of the digital wallet you would like to use, for example, PayPal or Google Wallet."
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2691
+          }
+        ],
+        "cachedContentTokenCount": 2691,
+        "candidatesTokenCount": 23,
+        "promptTokenCount": 2840,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2840
+          }
+        ],
+        "thoughtsTokenCount": 316,
+        "totalTokenCount": 3179
+      },
+      "invocationId": "e-9fa58975-acbf-43ec-bb8d-9f97af5dea4b",
+      "author": "shipping_address_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "96eb5ba0-a77b-480d-991d-6472974c43ed",
+      "timestamp": 1763516405.644419
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "google wallet"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-7b4c67fb-f600-4731-a4a5-0e9570dcf7fd",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "0b2de8fe-645d-4972-8a0f-5d21b40e67ed",
+      "timestamp": 1763516423.883959
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "This is where you might have to go through a redirect to prove your identity and allow your credentials provider to share credentials with the AI Agent.\n\nBut this is a demo, so I will assume you have granted me access to your account, with the login of bugsbunny@gmail.com.\n\nIs that ok?"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2688
+          }
+        ],
+        "cachedContentTokenCount": 2688,
+        "candidatesTokenCount": 66,
+        "promptTokenCount": 2867,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2867
+          }
+        ],
+        "totalTokenCount": 2933
+      },
+      "invocationId": "e-7b4c67fb-f600-4731-a4a5-0e9570dcf7fd",
+      "author": "shipping_address_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "eb9d0df3-dd01-4a76-9be6-9c5a7837d6ba",
+      "timestamp": 1763516423.885224
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "ok"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-bb54b3d1-81eb-4a1b-aa05-9779611ff5a8",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "1414b9ed-6fd9-4cfa-9d3a-88bf6efb7be1",
+      "timestamp": 1763516429.914164
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CvcBAdHtim8h43-NBJeGwLY9B3fPnzDu4hlOVr266fGEyl_X9anHWUg5iPz8gxb8CSFIVawGCOf-BWunP34JR4-9zmhwgDmj8UDISLn3qHbOLNqiHgu3HC4o7WL1nFaCjustKt3a0CbO0gJjJVmepXhYp-TjWSV8ipvHbOv7tTtdpgs0bLgW5fpfuACuyqflWMHK2jM6tIGVszo-xTC2JLYeI-J193xw3N-VxKOKtAH0xiKylXwObu7as7JdHy_jJKGeQLWUqlJ8qgSJfBqWpSeN5ytjkDIF6tmZXmoqzIB22KgURh1kh3V03iTq6fHpQUcmEBDkBrqQ3g==",
+            "functionCall": {
+              "id": "adk-10a29de6-b7fa-458f-8bf6-d505681c42ed",
+              "args": {
+                "user_email": "bugsbunny@gmail.com"
+              },
+              "name": "get_shipping_address"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2689
+          }
+        ],
+        "cachedContentTokenCount": 2689,
+        "candidatesTokenCount": 26,
+        "promptTokenCount": 2936,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2936
+          }
+        ],
+        "thoughtsTokenCount": 54,
+        "totalTokenCount": 3016
+      },
+      "invocationId": "e-bb54b3d1-81eb-4a1b-aa05-9779611ff5a8",
+      "author": "shipping_address_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "4ed9dcdd-92c3-4560-a55a-e7ca413a2999",
+      "timestamp": 1763516429.915268
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-10a29de6-b7fa-458f-8bf6-d505681c42ed",
+              "name": "get_shipping_address",
+              "response": {
+                "result": {
+                  "city": "Sample City",
+                  "country": "US",
+                  "organization": "Sample Organization",
+                  "phone_number": "+1-000-000-0000",
+                  "postal_code": "00000",
+                  "recipient": "Bugs Bunny",
+                  "region": "ST",
+                  "address_line": [
+                    "123 Main St"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-bb54b3d1-81eb-4a1b-aa05-9779611ff5a8",
+      "author": "shipping_address_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "0ad0437e-3259-4b1e-947c-d0bf8ee386a1",
+      "timestamp": 1763516433.934516
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "Cr4IAdHtim9xpNSuPisURBi5808iCboqvNSPEAJvhVK8IUU0Mm9TOIiPlUMl8t9IU-PVnh6LnrT2RwEZVVhL0DD3hygC1KXqNn6lVlzq7Z_GoaXX4FMx4wtsNt0Bpprxcy11cAvMGjZNqkiyJqwtiTEEJqzPLCiT4BHHsouOmLpQLoJjLb7FFrPvGV0q2EOYXNUiVDUG-FxJjjNln24E7VBh8WceToQ80fMne8mNzy2jza1LcS3y1TfpQU4u8bCDzFPvz7gm40-xqnODt0LWaRtmbwaIpbct4OP6Oc94qavh8VLk0I8RCC4C7fpxmC7JRl_qytiR8ww9OT5qSAVe1xklUI5oQHNWJlauP0P94UTBEu_I19uBnOrkBcLfVhJAHM5Pvsw-RbodE7XwWBYstoy1GZDTMEyHQJ_GFIw4RoXewAmXguGXImOGOUhtiBpo7R5eRzuuY7GGRyYpa6QTfh0BU_rP2ZXh8NhDvN99-_6zU7dXXGIhM9h_PTuqug-Fj6v4eI5l2vgmdSb9u7nFgtQLB5kKjpvgF9lrOtqkurYVq67Z18r9p2RdUnKg5W_WIIUN2xgd9dzz570iE3QpPCMJcQF7Jo3arZG48bK0C2WsIRYF6MhxrO-Z_BYyPXRx2IggsRFT-j9PvScS9e2n_pQ9LXW9g6ZqovdA_6MD3Nq5WgXR5r-2hlW5IM6AjShL248CpzfNizyte9qK2lgzwbKseCS8SfL8KuZ_giXBaUcamtZMm7BACGhmM8d0tn8x63UHtnfigbTsHtS-Gl8UDWHgA9XoT8zwWQDWkN1ns0K3XczrZTbAlaiAFpTA1-23ehM3libWGd5a3UDepsM--487kfaSOvDfAoAXtHhmDP1_yTb3sDmM24pqL0cBIrTj-yeNt-dQISd0Lrd0Z2cqGLy9UYnLw5gHTKf7I_QEYz3bU3r13yYI3Jef6TyKD-sPv8pcZdYwyncazlaIZiuk_TGEQu47rn13S4mWvwVJkmqumlgarPOPlQNAbg08Bz1KzzXbfEKBFq4H6q7f1YMtFKyv7Bh_VUzcAd8RiTrSQhF-GbJCbfNAwjrXMb1KsWKIr1tiwbi3yG4qGBf-5iFzgwYUuvEVhSddqycSMmzgyWX2lLtLkxk-LjEQX5OuYfBc4RBjqD95wODr9Dx_fdXBYzVT37Hz9Yf5RUjrRkKmpQosLb37EHAcuZ89PiThlBOeLx_-KRmqhNH21-qg2mfafsKy82ZrzS9_XRLAmNuSScIDkjI-AY8vQPHiX9aoGQR-OSqFL20D6BPktJ_m9np26_6k_ooHuSMdkKhHPXahmToIq07k2wH1Q5G6rCV1aE2TZYoLojq5NQGTcy51AvnifeSkRXzNZaph1tZHSwnoV4neiU6oHeMS3u8qu8RxvE_nqDUi61SrMVuTzM9Tt5mfvoyfCApPfVlpE3yNmew4Ins-",
+            "text": "{\"shipping_address\": {\"address_line\": [\"123 Main St\"], \"city\": \"Sample City\", \"country\": \"US\", \"organization\": \"Sample Organization\", \"phone_number\": \"+1-000-000-0000\", \"postal_code\": \"00000\", \"recipient\": \"Bugs Bunny\", \"region\": \"ST\"}}"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2651
+          }
+        ],
+        "cachedContentTokenCount": 2651,
+        "candidatesTokenCount": 84,
+        "promptTokenCount": 3056,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3056
+          }
+        ],
+        "thoughtsTokenCount": 234,
+        "totalTokenCount": 3374
+      },
+      "invocationId": "e-bb54b3d1-81eb-4a1b-aa05-9779611ff5a8",
+      "author": "shipping_address_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "ac8faada-0802-471c-9781-1543302c157c",
+      "timestamp": 1763516433.936303
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "gook"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c68dac27-1b44-4735-941f-84e746a9945e",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "f21b8ddb-bd81-4a17-86bd-77e451e7cfe1",
+      "timestamp": 1763516462.579751
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CtYHAdHtim9zLcWUEZhuV_owDju9yIETek33dtCZGiVIx58Oc-q_6N6aozRkAOZSaw5VMnb3U5Nm_z5HEv2yXLNxCAv37MLcP6uLZN5UB_AmtqdoEZLIqsVMTh7i3-uAo85PxCR8zL8NwBWdcfZW62OEGvQDdhfpMSdbpbooWlxEqrd_DVHUcb3G_JM2DSS4OZJVDqlitETDwKZEDIsvxX1WSQRiATYbzJCgRbYH0W3bZ3dTeL4fFPpwFT2apkj8i2nfdMEzji3AKGLVG-V1_b1soukiaU3csV9Fc3OfnxTwkQtc5puFjek3BJv3Yr2fXjlSI2836IfQWk03lKsDvndy6lwUqgbg4mzj7jpO-dyT0a7erhLSZA8kUkmoop6R9YSZo0samkhNe5SRDxE4E8eTm-UpjtUvuhFN-qOM2Gp6pcbH-fCoHeuSL1yWtTxT8HN1KoEIY81vWrtP4esChPiXxT8ag91z2coIh8-CkScQWPuMZynujZJKOyeGGL0PkKxnXsjIby7DKEPywsArudQx9JKm5Ksy2g6YEGzzd2kBHY3dHxn6cHVFop-AENLFKMMZSXOkSQdIsxRk6I21Xtev-Asv5d43SJJXkrAuemB3cIFXPLFaBzoRrn_9p-cfF-QwMHUvdd10veuLHI5lvDW22g7QLM7LEgvZrUIH6W4cc4vFh0pZ3Qf_2iMIlyNJcCr9cG2mdMHCZJHlgbYenDTQDhnnZmwZ-6uu0nYHI4fZo1-TNI1jyWFR-RLAAZ_ab9dWxMBi5Tau8kyjlHzXbswjPppKoQBgZpa50PA7bXmIg4UUI2RhE893GB35oiVSFotk_SwFxg6MDSZwT6EGEcteNuHcdw25Uvu5_s3LegfaZVGnID0VlII5wnSG9AxvjF2_UDO4dwd2xgC4mofiNWaWBB6Lbh7cIG9klRKys1mmUTJOkyCBNtqiJnmeMuFsGuhS0dOEuTq73ZI6s7hgYiOdomPYYBzneyD9VSBzGR4S4rFbD5JgDlLr375BH5dNj-S4vToO_ojbfQ-i9gFOx13hgMo4O4Lz8DvV9ShIIb-r6wS9hvsw7DJVkez9R6wpPqBfYj-FXBPkUiyHPL2aXP5wuPBKIQxymlYauIXNHAhVp2wE1WhGh1atPLo99XLeTIXhcI3aA1aZIKlYN3ho6TuV-mU517ovcJ4BnODAPFxBUqVYDetFDnpvsa8fnCY3Z6YjbsziIfZ9m6i8a-qCSVMSSFEgS9genzfcu6UNkI5ENO80j5-bzmGHiQ-sSyOE_v5GAZskd0YA55fDTYFe7rkaQvd3rMVZIA==",
+            "functionCall": {
+              "id": "adk-056ba356-d8e0-4b52-a157-010a6118958b",
+              "args": {
+                "agent_name": "root_agent"
+              },
+              "name": "transfer_to_agent"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2697
+          }
+        ],
+        "cachedContentTokenCount": 2697,
+        "candidatesTokenCount": 21,
+        "promptTokenCount": 3144,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3144
+          }
+        ],
+        "thoughtsTokenCount": 204,
+        "totalTokenCount": 3369
+      },
+      "invocationId": "e-c68dac27-1b44-4735-941f-84e746a9945e",
+      "author": "shipping_address_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "f473aecb-7dc2-47fa-a98d-5d8bf57d6a81",
+      "timestamp": 1763516462.580998
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-056ba356-d8e0-4b52-a157-010a6118958b",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c68dac27-1b44-4735-941f-84e746a9945e",
+      "author": "shipping_address_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "root_agent",
+        "requestedAuthConfigs": {}
+      },
+      "id": "0cd1aa4c-e31f-41bb-9a88-b4f3bdf69254",
+      "timestamp": 1763516465.632559
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "배송 주소:\n123 Main St\nSample City, ST 00000\nUS\nBugs Bunny\nSample Organization\n+1-000-000-0000\n\n"
+          },
+          {
+            "functionCall": {
+              "id": "adk-c7e2cc44-eb74-46a1-bd9a-4bb268fb8689",
+              "args": {
+                "shipping_address": {
+                  "phone_number": "+1-000-000-0000",
+                  "country": "US",
+                  "recipient": "Bugs Bunny",
+                  "organization": "Sample Organization",
+                  "address_line": [
+                    "123 Main St"
+                  ],
+                  "city": "Sample City",
+                  "postal_code": "00000",
+                  "region": "ST"
+                },
+                "debug_mode": false
+              },
+              "name": "update_cart"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 148,
+        "promptTokenCount": 4598,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4598
+          }
+        ],
+        "totalTokenCount": 4746
+      },
+      "invocationId": "e-c68dac27-1b44-4735-941f-84e746a9945e",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "d66d875c-7f6d-4fa3-9f53-bc5de6d6b161",
+      "timestamp": 1763516465.636258
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-c7e2cc44-eb74-46a1-bd9a-4bb268fb8689",
+              "name": "update_cart",
+              "response": {
+                "result": {
+                  "contents": {
+                    "id": "cart_1",
+                    "user_cart_confirmation_required": true,
+                    "payment_request": {
+                      "method_data": [
+                        {
+                          "supported_methods": "CARD",
+                          "data": {
+                            "network": [
+                              "mastercard",
+                              "paypal",
+                              "amex"
+                            ]
+                          }
+                        }
+                      ],
+                      "details": {
+                        "id": "order_1",
+                        "display_items": [
+                          {
+                            "label": "기본형 내구성이 뛰어난 커피포트",
+                            "amount": {
+                              "currency": "KRW",
+                              "value": 25003.5
+                            },
+                            "refund_period": 30
+                          },
+                          {
+                            "label": "Shipping",
+                            "amount": {
+                              "currency": "USD",
+                              "value": 2
+                            },
+                            "refund_period": 30
+                          },
+                          {
+                            "label": "Tax",
+                            "amount": {
+                              "currency": "USD",
+                              "value": 1.5
+                            },
+                            "refund_period": 30
+                          }
+                        ],
+                        "total": {
+                          "label": "Total",
+                          "amount": {
+                            "currency": "KRW",
+                            "value": 25003.5
+                          },
+                          "refund_period": 30
+                        }
+                      },
+                      "options": {
+                        "request_payer_name": false,
+                        "request_payer_email": false,
+                        "request_payer_phone": false,
+                        "request_shipping": true
+                      },
+                      "shipping_address": {
+                        "city": "Sample City",
+                        "country": "US",
+                        "organization": "Sample Organization",
+                        "phone_number": "+1-000-000-0000",
+                        "postal_code": "00000",
+                        "recipient": "Bugs Bunny",
+                        "region": "ST",
+                        "address_line": [
+                          "123 Main St"
+                        ]
+                      }
+                    },
+                    "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+                    "merchant_name": "Generic Merchant"
+                  },
+                  "merchant_authorization": "eyJhbGciOiJSUzI1NiIsImtpZIwMjQwOTA..."
+                }
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c68dac27-1b44-4735-941f-84e746a9945e",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {
+          "cart_mandate": {
+            "contents": {
+              "id": "cart_1",
+              "user_cart_confirmation_required": true,
+              "payment_request": {
+                "method_data": [
+                  {
+                    "supported_methods": "CARD",
+                    "data": {
+                      "network": [
+                        "mastercard",
+                        "paypal",
+                        "amex"
+                      ]
+                    }
+                  }
+                ],
+                "details": {
+                  "id": "order_1",
+                  "display_items": [
+                    {
+                      "label": "기본형 내구성이 뛰어난 커피포트",
+                      "amount": {
+                        "currency": "KRW",
+                        "value": 25003.5
+                      },
+                      "refund_period": 30
+                    },
+                    {
+                      "label": "Shipping",
+                      "amount": {
+                        "currency": "USD",
+                        "value": 2
+                      },
+                      "refund_period": 30
+                    },
+                    {
+                      "label": "Tax",
+                      "amount": {
+                        "currency": "USD",
+                        "value": 1.5
+                      },
+                      "refund_period": 30
+                    }
+                  ],
+                  "total": {
+                    "label": "Total",
+                    "amount": {
+                      "currency": "KRW",
+                      "value": 25003.5
+                    },
+                    "refund_period": 30
+                  }
+                },
+                "options": {
+                  "request_payer_name": false,
+                  "request_payer_email": false,
+                  "request_payer_phone": false,
+                  "request_shipping": true
+                },
+                "shipping_address": {
+                  "city": "Sample City",
+                  "country": "US",
+                  "organization": "Sample Organization",
+                  "phone_number": "+1-000-000-0000",
+                  "postal_code": "00000",
+                  "recipient": "Bugs Bunny",
+                  "region": "ST",
+                  "address_line": [
+                    "123 Main St"
+                  ]
+                }
+              },
+              "cart_expiry": "2025-11-19T02:08:42.615807+00:00",
+              "merchant_name": "Generic Merchant"
+            },
+            "merchant_authorization": "eyJhbGciOiJSUzI1NiIsImtpZIwMjQwOTA..."
+          },
+          "shipping_address": {
+            "phone_number": "+1-000-000-0000",
+            "country": "US",
+            "recipient": "Bugs Bunny",
+            "organization": "Sample Organization",
+            "address_line": [
+              "123 Main St"
+            ],
+            "city": "Sample City",
+            "postal_code": "00000",
+            "region": "ST"
+          }
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "8cd1d3db-fb8d-45ab-8a22-f8af4700d6fb",
+      "timestamp": 1763516471.366056
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-4f59324e-1ae6-4d93-9699-9850b860f5f6",
+              "args": {
+                "agent_name": "payment_method_collector"
+              },
+              "name": "transfer_to_agent"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3789
+          }
+        ],
+        "cachedContentTokenCount": 3789,
+        "candidatesTokenCount": 23,
+        "promptTokenCount": 5178,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5178
+          }
+        ],
+        "totalTokenCount": 5201
+      },
+      "invocationId": "e-c68dac27-1b44-4735-941f-84e746a9945e",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "cfbe71d3-569f-4f63-add5-0166a0838316",
+      "timestamp": 1763516471.369368
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-4f59324e-1ae6-4d93-9699-9850b860f5f6",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c68dac27-1b44-4735-941f-84e746a9945e",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "payment_method_collector",
+        "requestedAuthConfigs": {}
+      },
+      "id": "f904922e-234e-4ff4-87c3-8a1cbd8bf593",
+      "timestamp": 1763516473.542376
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CuMcAdHtim8qcv8_1_2Y9fbQI-pSn9w83sTjtcuTWrPWwEt6cgVq3fNkCCPEW3akLrXhEXGJqkYckFE9vvS1ADJZDUJL2WP3H64KEm90-2JA7ynipihJU69OC37Y0aA9R6NLdhZMOWpdt3mXqkIpXdMvZZLF3U8PMGlQHUsDRt3do7gShp3SuBYzPFwYYXggdE-JIqqagOGq6Zm3plCf-0cf4BnOk9V1buKRuU67XoTYrgS6vw4rp8nwSwsDLvPPnt7KJxRwZMInwHinDw_R4Ha3L-cZrTVJxncNLvCCwLkid2kmMpW6d6hLmA7Ohz2Ih-PD47f-csGjQ2IvW-A9ZvICf4Aa5DhI8onZ5qglJ4teeTv7AklFY_OsqTYRpVeWF2s8yNWCxxDOxLcyc95WIZRunnxems88BWWt2mD_4c2QNMCnyr3iF8TXrbZGc8XAOV3aeHkGtIlHcANfiIyRDC0hhfmtJYNllPlXrzng9VSCIxu4U1aDjiC9aWtjJ4lmb3tVNFdxkYaPiiNsvVyVn_P7A3fSr2sn8kgYp0Xw0CCVaheVRk4iWm8hUXOZA_KKNjeQTxp_niUv7Bqs7XihEsmwXJI3PFoP9UGF8ts6zEDJPy-Yi9mPttP6IRVc3Y3drAOv6xL6GvBO0Cenf3bi8U03q-agbDGl4xkZGJq79bVnmBjCJqgpoFzCvK6ZF7pqS8Z5JPy685hFsm8BjRU3hOBYejJn7i0bIoceudagQmLHr5xMqRjjiAiw5GTNaF776SOYI6dcGQCRcMSDJ4zy1_6Evve7PLXudwMQ0nJNSdnKUXBps8Up4EWGhbJ9DDkLs3Q85rvQjUwhQMkle2afQaLTIX8RQyl_NCVTGv1ggTX5MijT1wnqOajILAG6fAXEvc7yRPtNu9ZgC0pOidrWYH3xm4C1QWpZLFAKc9zDSI6tcq9zJP2fultv6xjiDZp19BQrj86b0vS7Pu_s_Zx6eboH2OxnI97RpBDMrk87fIy1KqI52SZ2sxmRDePPCFSU9GtU2OZwXm1R5pe5ljPPUWuSXB16U-v5dxJjpR063YGIQXPMNGXZ4LuVME8hqQrdcNmTkVPDHtBQejFvm_7NfddFXQbh1c2d3ePjsB9vdb4Lw7K5yUsBHKzETSG8XGUZS67pYJZALM5SIX5Kad09d5edVHKhOyf8dEMug5ZfMYPNJABs4ov9hpSsPYDkdJwVGFjPBJL8Te66Yh51cec__fcbBTY0NuAIJSX_792S30mWXbveUGKE9bQCZhzrjr01yx-oeQPOxoLxKwOT5pOZx8VZWz1vYgX5NIZQ9GDP2-cyqJ98L3d_EmJ_UnoYY7Fd2YW5jMfVjwy_PODlh6Yl0jrZ1UdLCG_t3nL_5VVBB171ISnCR5PXMYlCe75F6rCJg94dKchFkfFS6DZsvRPLb-FReIPbN6w_d1g_hmhhFH5V9uwErVNjs7SuwiK4lON6Ty3CRDCxiETp0rptcj02_aazzJg8pnccWSrVXDxUaN4vfZgEE_XlrAlvedKeobOFt7aW3rPvLkYpRqXSv-lI50Yo-fEp79uRz0dvPiExg1m3JH4mTIGdxWwDz09klyye_S8cTYhIbxbY0HaSQReNG6NWKz3B2vh6dfl73XfxBvmo5Xk9mSc_iPhTh7VIpU7Yd6CaLSF1oBvza0KUMTC2mdZKG8S2Ejs6-PeEvU3OIzMROIHOOaMRgjhEv-t6bQR-LmVn5LVqP6LkPDlNfPuwjNKV7fauIVOFIMEV5Zp12qumW39wC2bR_eVe_K7jI9vwIscj5AT_8yRXEcV4E_9gs9gj2ZvoCpANHkuCnbMM9Irt37zr3lYJ0YQvWyk4drEHeAE_X-rWeLz2mJeY0Krsg55x9kyfo2KI4fZQFhcZyj-s7wpcRFfJhxXRNW0KGDo9y5tPFOpsTaN3A3LyI8kvDdWxZFiY19o44ohYZTTmoG0vCZ3ERR0wtBLOdhOg5UsdRWTCGC7F472tq-fcOivSX_cqofl1S1CjZW_3RcTGH4mZKFD1z7CwLVw1mS7pCTVqBEqS3Co2SUszU8V1DXduq_Vmh16GGS98nArEysJrimqL2phycS-bo1Y6adrcNuHEAjAAXfbRg8S6o_yZV4HpZTTnaaX90dkper9WVHAb4PMQjmj3S6f24JVXgrn8VJrrVRYMBG_anJsv2pOJjXZ_LoRPXNb_QBIu_MXWF1LCovTyckJb5z2E70BL1qq53AFHbboFiDrhJLH5T3EtbMMXMYqVOhTxjDUjuPl7sfwADKbP1TAUCUOGCoSjcOU0Zi2sFaPWk8F0FUvgMt63pjVzqmtydSrpc02MSQyfjx2FXKoGBW55Is_E_9kNsUSqnA9eZzPtt1jHaLj4DPoEF-Ak6FysDT88U65ChZyFXqohijMBJ_wqIlOK2hoTiJX26dtYNGcDhcsIo6JTCH5xkwueofif_xEhDNI7afbuOcf3G8xtMo75RXh4-mtkUqgimCAj3rGZ93t3gSqy_jMS8fHhWTYuzY28y7IZgycfNQYq7cDW403SgodLyG1WwuY1e3unJsNcUxGZH3FSvH-sc5bn4buxRsAjKniNnqwWUDEQ9P5ZmSpunxkfWM2d4J2JpbMaH2oUTEeYXDtZpRXKAEIQcaKz9Z25H4nLe59I4qdd93lgmFDqF5cGRP6PKAHYOvREjfkCvCl3q2njPcjHo6hxeDe5ZToq-lm0188QiWQA-6p6dfTG8PBMU1fM1L1tDxrLYcOyH_Z2hhbKYciQL_wxG8OZhCpnW4BiUA-7FcSkYPgVceNrl2sQw69ptphsfcR6gd7VzuTaonxhzj4NkxAcNwPpyDmvvnwEMwDmRq9eeMRVhi1NUM82ziCbyzCRXl64kirfYiIJRdBUzMQHyzNHo_IkSX5MMco-UzVD4__j3mfgcB-w5L-Bksho1_XTgWXrpFhPekiof60DO67bvl9rdYxgawbUffcr9TvcWPnIq0w_Df5GyrsNq-XDGyRl16nZFS-YSypQxytSWiI5o_RxTb_RDmkPjCUQHcKsIUxdMsODlTcJj_QQT2zHurUJYtKzuUyYl7Z0ACIGFDJXehPNvrfUpO7V15PKp0_eQAB06tpuS-zHHWcLgYZdf3cB81FJ30VqPZHpP6nuPZS4IuyMekDAuE9YqCA9uEMcPvdU5L-US6CYmKOdRJBWBoKxcNyJPTa0wtU0zSB2n5AKvWIakY8gX_USZzShIa9l61rsu6yM1h1REiNefmp0hczJYBYRJq9fc6LW468eN4iMVC6GoWp0it-cJ6fSzaUb7RdA4Q1U3HDbwk9ycnJlS2yZjGci8IeKYUpbyhnSahuCHJnBKBjnUeuLNAiggwROYOZcGz3kp3MOf2qFNFOMZZEqS9WtiiyV7R1xBhIEXiFbKy440OT4FZzg7ooslNa9nyktDZAdiNhW078j1uI8QelPl1hYQuiaDO988aaPcIsr4TQHL7ve65MQNLtYlM9xpk5YYQ64fdfpsAOXHUi1Amx5TL9v3Liy25wlNx7uOQ6KzFgDs6Rf6jaAwJeyRyMYCYegcBnCiMxiOntgnBCZk4i--mBJIwj6kXDiD4QwhMhL9KPLKZOkpMYPpnp0hN9PEV64iqJYdp7unBsEm11eovaQwyUWQVm8ZRpObXp1_FTffW3hNmtCcpP10OASNFbxiWKSSkMJ-2hCPWA-kB7vAF59xjssZrYFuVqE7E1FCDVNY-0a8zH5p-vTzaMZry1ZdP80eNr8EUhm0xKkkz55_ZayWOTNQqznUSERF5HfBOtAYPXjOH_ugqJLOe5ZqCfEOOkNS-VoQtaumBBqsQ_I3MupxRYpDP1H7KpbApY_jeTymPczdovdcwj5ltqvfVyVHBmvPpypS5PJcWL90783LyGc9LqZtMpQ91_yWV4yQgFamEBaPWQxZgwiSQE2lxjqoNDYryeWMxnKvYF8Mue7c9tViZB2qwYRtDK1MPzkKLb-uty_P1Lw_rOW8hONymzA7FoHBk90ZWiS-SQqWA0EdQobsTHCgKhWzfx0-nCmEof1p39enoSk-k1k8Vd2By7Kc535R1JRXSkVnGmetsx2-nov22-OMdDKr_XM2zO5SI6xNchlc_wXNEEDS910ACxGpSTe8t_GnQzzqqYfRuUUQscxy2jrapYCnAQAdoI86aRMT3t-T7Lo7xB6-ZZeqwb8iE9sM4CuH56Hdjw3w10pzQf0fKZAlUj6drqjE1llOr2lToHNjRZWvaH89B7N0AAKXEUYk3miGFBNDFutkm7u_hZXvvQ7rMrJWTJ4gTtSjYlFpzGtsTAUrkxxZLNQFVXcmdT_QDKfK5wULu8By_kByJ-xIWPEhnB_Yn1pohN0bsPqTwda8J59VG93lWsyM4t-Lhe-dyTt5maRfzDMfr6zYT9hrNiUZmXcSKYCrwU_Krt7FaFo_PESmqP4g_jug5JixfWzcOMAJF9o293s6jHK01FDYktcyMS6zmNdNg3X_YjlSNYIAFY46N5kwd-SeAa_JpFe5c0W7KEHgSXIWh6UU7qtdiSWNG7IG8j3lfQa1hDfpqrz8j3ItamkhDEsk7xuPdU3aVqNTVhpNoxheWFjvny4Cb4dlyLfvy_pC_AgWpFtDOWkOXAJetq-ZT_vIU3DDUwwvuqKlH5WxiSs4TzFPv8-cPOLhJ9LyEofebtd90jXSKv-jwLxJcS-fecldErI9jXpuNNIe9rDXUQhSQQNv0CB_LBQJb_YeDBU5DHPtJ0svUEJDrlN3mj4uCZaTaGvbPh3Ma6DNBzGSRj7B8O1pp0BqCeCqnHlgX25CeOMZVujrZO8-9yo6tfdfGchwe-0gxhaOmx2IO3nscyQOENLmqDpHApdONVI0WEJwhfvCCU35G7mCwxh9Del9CVnnOBex5H6cj0I6UeGwcA=",
+            "text": "주문 요약:\n\n**주문 내역:**\n*   **판매처:** Generic Merchant\n*   **상품:** 기본형 내구성이 뛰어난 커피포트\n*   **가격 세부 정보:**\n    *   배송비: US$2.00\n    *   세금: US$1.50\n    *   총액: ₩25,003.50\n*   **만료:** 2025년 11월 19일 오전 2시 8분 (UTC)\n*   **환불 기간:** 30일\n\n**배송 주소:**\nBugs Bunny\nSample Organization\n123 Main St\nSample City, ST 00000\nUS\n+1-000-000-0000\n"
+          },
+          {
+            "functionCall": {
+              "id": "adk-49017c7d-4f7a-453c-880f-f0ac613cdcbb",
+              "args": {
+                "user_email": "bugsbunny@gmail.com"
+              },
+              "name": "get_payment_methods"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 210,
+        "promptTokenCount": 4139,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4139
+          }
+        ],
+        "thoughtsTokenCount": 1144,
+        "totalTokenCount": 5493
+      },
+      "invocationId": "e-c68dac27-1b44-4735-941f-84e746a9945e",
+      "author": "payment_method_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "532bdccf-4eed-44b4-9c6c-32eb1aff19f2",
+      "timestamp": 1763516473.544835
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-49017c7d-4f7a-453c-880f-f0ac613cdcbb",
+              "name": "get_payment_methods",
+              "response": {
+                "payment_method_aliases": [
+                  "American Express ending in 4444",
+                  "American Express ending in 8888"
+                ]
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-c68dac27-1b44-4735-941f-84e746a9945e",
+      "author": "payment_method_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "158da7f7-5cd6-4d09-8585-3076093dc6f9",
+      "timestamp": 1763516485.143854
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "결제를 위해 다음 결제 방법 중 하나를 선택해 주세요:\n\n1.  American Express ending in 4444\n2.  American Express ending in 8888\n\n어떤 결제 방법을 사용하시겠습니까?"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3052
+          }
+        ],
+        "cachedContentTokenCount": 3052,
+        "candidatesTokenCount": 51,
+        "promptTokenCount": 4390,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4390
+          }
+        ],
+        "totalTokenCount": 4441
+      },
+      "invocationId": "e-c68dac27-1b44-4735-941f-84e746a9945e",
+      "author": "payment_method_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "523e2699-d496-4bc5-b10e-b7a359a8c275",
+      "timestamp": 1763516485.146838
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "American Express ending in 4444"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-55f06701-e2fc-47d4-a31a-68b13d28e92d",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "706bebf3-5f25-41c3-a030-31fb9be692e9",
+      "timestamp": 1763516501.831216
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-a5f01d36-221e-4404-b6d2-12eeca08b63d",
+              "args": {
+                "user_email": "bugsbunny@gmail.com",
+                "payment_method_alias": "American Express ending in 4444"
+              },
+              "name": "get_payment_credential_token"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 45,
+        "promptTokenCount": 4452,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4452
+          }
+        ],
+        "totalTokenCount": 4497
+      },
+      "invocationId": "e-55f06701-e2fc-47d4-a31a-68b13d28e92d",
+      "author": "payment_method_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "1eb617c9-e08c-42c3-9864-1300b6f5401a",
+      "timestamp": 1763516501.833876
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-a5f01d36-221e-4404-b6d2-12eeca08b63d",
+              "name": "get_payment_credential_token",
+              "response": {
+                "status": "success",
+                "token": "fake_payment_credential_token_0"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-55f06701-e2fc-47d4-a31a-68b13d28e92d",
+      "author": "payment_method_collector",
+      "actions": {
+        "stateDelta": {
+          "payment_credential_token": {
+            "value": "fake_payment_credential_token_0",
+            "url": "http://localhost:8002/a2a/credentials_provider"
+          }
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "eaaab6ba-8d83-463d-9e41-2b3ee9bcd973",
+      "timestamp": 1763516505.692909
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-640ca398-3798-4475-bc57-06146cea58bf",
+              "args": {
+                "agent_name": "root_agent"
+              },
+              "name": "transfer_to_agent"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3782
+          }
+        ],
+        "cachedContentTokenCount": 3782,
+        "candidatesTokenCount": 21,
+        "promptTokenCount": 4530,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4530
+          }
+        ],
+        "totalTokenCount": 4551
+      },
+      "invocationId": "e-55f06701-e2fc-47d4-a31a-68b13d28e92d",
+      "author": "payment_method_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "e770955f-0ccc-4338-ad7b-d3a4a94a649d",
+      "timestamp": 1763516505.695168
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-640ca398-3798-4475-bc57-06146cea58bf",
+              "name": "transfer_to_agent",
+              "response": {
+                "result": null
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-55f06701-e2fc-47d4-a31a-68b13d28e92d",
+      "author": "payment_method_collector",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "transferToAgent": "root_agent",
+        "requestedAuthConfigs": {}
+      },
+      "id": "cfd903b2-84af-49c6-99da-b9bee250edbb",
+      "timestamp": 1763516507.784356
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "This is where you would be redirected to a trusted surface to confirm the purchase.\nBut this is a demo, so you can confirm your purchase here.\n"
+          },
+          {
+            "functionCall": {
+              "id": "adk-24e0f418-20af-4360-945e-54a222a4407a",
+              "args": {
+                "user_email": "bugsbunny@gmail.com",
+                "payment_method_alias": "American Express ending in 4444"
+              },
+              "name": "create_payment_mandate"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4765
+          }
+        ],
+        "cachedContentTokenCount": 4765,
+        "candidatesTokenCount": 76,
+        "promptTokenCount": 5734,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5734
+          }
+        ],
+        "totalTokenCount": 5810
+      },
+      "invocationId": "e-55f06701-e2fc-47d4-a31a-68b13d28e92d",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "8862be09-f74e-45b1-9ee9-de08cb2dfffb",
+      "timestamp": 1763516507.788127
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-24e0f418-20af-4360-945e-54a222a4407a",
+              "name": "create_payment_mandate",
+              "response": {
+                "result": {
+                  "payment_mandate_contents": {
+                    "payment_mandate_id": "726348364a91446aaa9a0bd27e6fe8fb",
+                    "payment_details_id": "order_1",
+                    "payment_details_total": {
+                      "label": "Total",
+                      "amount": {
+                        "currency": "KRW",
+                        "value": 25003.5
+                      },
+                      "refund_period": 30
+                    },
+                    "payment_response": {
+                      "request_id": "order_1",
+                      "method_name": "CARD",
+                      "details": {
+                        "token": {
+                          "value": "fake_payment_credential_token_0",
+                          "url": "http://localhost:8002/a2a/credentials_provider"
+                        }
+                      },
+                      "shipping_address": {
+                        "city": "Sample City",
+                        "country": "US",
+                        "organization": "Sample Organization",
+                        "phone_number": "+1-000-000-0000",
+                        "postal_code": "00000",
+                        "recipient": "Bugs Bunny",
+                        "region": "ST",
+                        "address_line": [
+                          "123 Main St"
+                        ]
+                      },
+                      "payer_email": "bugsbunny@gmail.com"
+                    },
+                    "merchant_agent": "Generic Merchant",
+                    "timestamp": "2025-11-19T01:41:51.359061+00:00"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-55f06701-e2fc-47d4-a31a-68b13d28e92d",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {
+          "payment_mandate": {
+            "payment_mandate_contents": {
+              "payment_mandate_id": "726348364a91446aaa9a0bd27e6fe8fb",
+              "payment_details_id": "order_1",
+              "payment_details_total": {
+                "label": "Total",
+                "amount": {
+                  "currency": "KRW",
+                  "value": 25003.5
+                },
+                "refund_period": 30
+              },
+              "payment_response": {
+                "request_id": "order_1",
+                "method_name": "CARD",
+                "details": {
+                  "token": {
+                    "value": "fake_payment_credential_token_0",
+                    "url": "http://localhost:8002/a2a/credentials_provider"
+                  }
+                },
+                "shipping_address": {
+                  "city": "Sample City",
+                  "country": "US",
+                  "organization": "Sample Organization",
+                  "phone_number": "+1-000-000-0000",
+                  "postal_code": "00000",
+                  "recipient": "Bugs Bunny",
+                  "region": "ST",
+                  "address_line": [
+                    "123 Main St"
+                  ]
+                },
+                "payer_email": "bugsbunny@gmail.com"
+              },
+              "merchant_agent": "Generic Merchant",
+              "timestamp": "2025-11-19T01:41:51.359061+00:00"
+            }
+          }
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "296e2cbe-dc4d-457e-a6a0-9b97deb985e1",
+      "timestamp": 1763516511.359095
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "**최종 주문 내역**\n\n**카트 내용:**\n*   상품: 기본형 내구성이 뛰어난 커피포트\n*   가격: ₩25,003.50\n*   배송비: US$2.00\n*   세금: US$1.50\n*   총 가격: ₩25,003.50\n*   카트 유효 기간: 2025년 11월 19일 오전 2시 8분 (UTC)까지\n*   환불 가능 기간: 30일\n\n**배송 주소:**\nBugs Bunny\nSample Organization\n123 Main St\nSample City, ST 00000\nUS\n+1-000-000-0000\n\n**결제 방법:**\nAmerican Express ending in 4444\n\n선택하신 상품을 선택하신 결제 방법으로 구매하시겠습니까?"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 214,
+        "promptTokenCount": 6138,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6138
+          }
+        ],
+        "totalTokenCount": 6352
+      },
+      "invocationId": "e-55f06701-e2fc-47d4-a31a-68b13d28e92d",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "f7fe4c08-25da-4592-8520-cee002072210",
+      "timestamp": 1763516511.362398
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "yes"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "38455bfa-856e-4a51-8027-4aab871cb8d0",
+      "timestamp": 1763516518.876182
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "Ct8BAdHtim93_sHPKSmNEAmLXoJdiXF2jLuX-ZZb69ir81kuK54LGPRoCDWGYcyxWI4fGmjROpxxRZJWaFB7mcpTgxiwcT2exTwjk-86k_uhwkT8AHMeNsa0B_pwM7Z4jtk_pKAl_iVL6bKe7FlrC8NL6oR9KU2rlUHw_SRPVR-KjN6J0bEpQbFrRpNMZStOe2R6iAyaB-hYdSZ0KRZCgu2wgafF7euNvnKdJSsL_Fbd1yh-JIb-fb0qonkCOkMnITJV83hYhXpIFVHiQYwojvsL1iFDqKzZwxvWgkuKDWYhTA==",
+            "functionCall": {
+              "id": "adk-23ab9301-d026-4a26-b1be-8eaefb8eac1b",
+              "args": {},
+              "name": "sign_mandates_on_user_device"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "candidatesTokenCount": 17,
+        "promptTokenCount": 6355,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6355
+          }
+        ],
+        "thoughtsTokenCount": 40,
+        "totalTokenCount": 6412
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "911a8fad-f4c1-4604-86dc-64b96064a762",
+      "timestamp": 1763516518.878926
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-23ab9301-d026-4a26-b1be-8eaefb8eac1b",
+              "name": "sign_mandates_on_user_device",
+              "response": {
+                "result": "fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {
+          "signed_payment_mandate": {
+            "payment_mandate_contents": {
+              "payment_mandate_id": "726348364a91446aaa9a0bd27e6fe8fb",
+              "payment_details_id": "order_1",
+              "payment_details_total": {
+                "label": "Total",
+                "amount": {
+                  "currency": "KRW",
+                  "value": 25003.5
+                },
+                "refund_period": 30
+              },
+              "payment_response": {
+                "request_id": "order_1",
+                "method_name": "CARD",
+                "details": {
+                  "token": {
+                    "value": "fake_payment_credential_token_0",
+                    "url": "http://localhost:8002/a2a/credentials_provider"
+                  }
+                },
+                "shipping_address": {
+                  "city": "Sample City",
+                  "country": "US",
+                  "organization": "Sample Organization",
+                  "phone_number": "+1-000-000-0000",
+                  "postal_code": "00000",
+                  "recipient": "Bugs Bunny",
+                  "region": "ST",
+                  "address_line": [
+                    "123 Main St"
+                  ]
+                },
+                "payer_email": "bugsbunny@gmail.com"
+              },
+              "merchant_agent": "Generic Merchant",
+              "timestamp": "2025-11-19T01:41:51.359061+00:00"
+            },
+            "user_authorization": "fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"
+          }
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "094b3255-a8ff-472b-baeb-6b0318bd8f57",
+      "timestamp": 1763516521.415368
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-3a314e57-0b03-4708-9c39-32d3c9cb446f",
+              "args": {
+                "debug_mode": false
+              },
+              "name": "send_signed_payment_mandate_to_credentials_provider"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5705
+          }
+        ],
+        "cachedContentTokenCount": 5705,
+        "candidatesTokenCount": 27,
+        "promptTokenCount": 6498,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6498
+          }
+        ],
+        "totalTokenCount": 6525
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "6a8307ef-e56f-400c-868a-14e43488fc19",
+      "timestamp": 1763516521.418504
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-3a314e57-0b03-4708-9c39-32d3c9cb446f",
+              "name": "send_signed_payment_mandate_to_credentials_provider",
+              "response": {
+                "result": {
+                  "contextId": "d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d",
+                  "history": [
+                    {
+                      "contextId": "d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d",
+                      "kind": "message",
+                      "messageId": "fd62d549eb9f4dd1b7dd47d0cf38b5bd",
+                      "parts": [
+                        {
+                          "kind": "text",
+                          "text": "This is the signed payment mandate"
+                        },
+                        {
+                          "data": {
+                            "ap2.mandates.PaymentMandate": {
+                              "payment_mandate_contents": {
+                                "payment_mandate_id": "726348364a91446aaa9a0bd27e6fe8fb",
+                                "payment_details_id": "order_1",
+                                "payment_details_total": {
+                                  "label": "Total",
+                                  "amount": {
+                                    "currency": "KRW",
+                                    "value": 25003.5
+                                  },
+                                  "refund_period": 30
+                                },
+                                "payment_response": {
+                                  "request_id": "order_1",
+                                  "method_name": "CARD",
+                                  "details": {
+                                    "token": {
+                                      "value": "fake_payment_credential_token_0",
+                                      "url": "http://localhost:8002/a2a/credentials_provider"
+                                    }
+                                  },
+                                  "shipping_address": {
+                                    "city": "Sample City",
+                                    "country": "US",
+                                    "organization": "Sample Organization",
+                                    "phone_number": "+1-000-000-0000",
+                                    "postal_code": "00000",
+                                    "recipient": "Bugs Bunny",
+                                    "region": "ST",
+                                    "address_line": [
+                                      "123 Main St"
+                                    ]
+                                  },
+                                  "payer_email": "bugsbunny@gmail.com"
+                                },
+                                "merchant_agent": "Generic Merchant",
+                                "timestamp": "2025-11-19T01:41:51.359061+00:00"
+                              },
+                              "user_authorization": "fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"
+                            }
+                          },
+                          "kind": "data"
+                        },
+                        {
+                          "data": {
+                            "risk_data": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"
+                          },
+                          "kind": "data"
+                        }
+                      ],
+                      "role": "agent",
+                      "taskId": "d58c5cf1-cdec-442c-9401-b6932cd5b0e6"
+                    }
+                  ],
+                  "id": "d58c5cf1-cdec-442c-9401-b6932cd5b0e6",
+                  "kind": "task",
+                  "status": {
+                    "state": "completed",
+                    "timestamp": "2025-11-19T01:42:05.181402+00:00"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "001acbcb-9604-4432-a258-975631ec8956",
+      "timestamp": 1763516525.185433
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "id": "adk-2a571235-3d8d-43e9-9e77-90a1d7a5a0dd",
+              "args": {
+                "debug_mode": false
+              },
+              "name": "initiate_payment"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5738
+          }
+        ],
+        "cachedContentTokenCount": 5738,
+        "candidatesTokenCount": 17,
+        "promptTokenCount": 7255,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7255
+          }
+        ],
+        "totalTokenCount": 7272
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "7dc10bb9-582c-40d0-a119-1beb9c4a0229",
+      "timestamp": 1763516525.19161
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-2a571235-3d8d-43e9-9e77-90a1d7a5a0dd",
+              "name": "initiate_payment",
+              "response": {
+                "result": {
+                  "message": {
+                    "contextId": "d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d",
+                    "kind": "message",
+                    "messageId": "d25b9824-69f2-4603-93fa-8191e8a9d194",
+                    "parts": [
+                      {
+                        "kind": "text",
+                        "text": "An error occurred: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\\nPlease retry in 52.136229975s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}"
+                      }
+                    ],
+                    "role": "agent",
+                    "taskId": "8b0dff40-c2c1-4ef8-96b9-1ef7676279af"
+                  },
+                  "state": "failed",
+                  "timestamp": "2025-11-19T01:42:08.066308+00:00"
+                }
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {
+          "initiate_payment_task_id": "8b0dff40-c2c1-4ef8-96b9-1ef7676279af"
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "a6e7de4f-57c8-4ca7-b151-30142adec684",
+      "timestamp": 1763516528.069231
+    },
+    {
+      "errorMessage": "Gemini server error. Retrying...",
+      "customMetadata": {
+        "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\\nPlease retry in 51.297836003s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '51s'}]}}"
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "eb53789c-5e7d-4434-b0fc-92f5a081fba1",
+      "timestamp": 1763516529.013365
+    },
+    {
+      "errorMessage": "Gemini server error. Retrying...",
+      "customMetadata": {
+        "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\\nPlease retry in 50.330583815s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '50s'}]}}"
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "9b439b3a-5aa6-49e1-ba86-83806d90f54d",
+      "timestamp": 1763516529.887219
+    },
+    {
+      "errorMessage": "Gemini server error. Retrying...",
+      "customMetadata": {
+        "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\\nPlease retry in 49.480620846s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '49s'}]}}"
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "7e8451dd-2d40-47e5-98f2-aa8db5347e6f",
+      "timestamp": 1763516530.71451
+    },
+    {
+      "errorMessage": "Gemini server error. Retrying...",
+      "customMetadata": {
+        "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\\nPlease retry in 48.647925236s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '48s'}]}}"
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "334bc006-3691-4eaa-bd28-267608c93fa6",
+      "timestamp": 1763516531.548818
+    },
+    {
+      "errorMessage": "Gemini server error. Retrying...",
+      "customMetadata": {
+        "error": "429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\\nPlease retry in 47.820124939s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}"
+      },
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "3f110c74-8623-49e6-91bf-aa32f9ff4262",
+      "timestamp": 1763516532.3811
+    },
+    {
+      "errorMessage": "Maximum retries exhausted. The remote Gemini server failed to respond. Please try again later.",
+      "invocationId": "e-bc2a6280-c7f5-400a-9d75-e6b07954a2af",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "ca2e5717-7b9e-4394-9d61-54ece1d24327",
+      "timestamp": 1763516532.381229
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "retry plz"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-f0cd8c0b-6b34-4dc8-bd4a-c0bda9eedcab",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "1d561cf3-0e65-46ce-a23e-b873be8900fa",
+      "timestamp": 1763516550.614648
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CoMCAdHtim9quhE_2O7eQ6QqZW9Q0l6Wc62SBOOt71qph2UgqlwA4_BAW4FrWRYl_YJ7p2EKi-DOR-YC4oe5cO18ZLggZ63xLNc0NfAYQyMccNTxx21f2AC3OD88nT2FCSd_zd8BYo0VpISpt1ZYeaGmFYjZ5Y03gfR5o9DBQI53z4mteU1F_8mfbs3WeoWQqdAv10gJj22IYjkPVdKXSi1wfLQM629ZLQ1O6vZ74-TxtqQnnZUAM00KWfbWVB53ZN63tej0bA22j27P_W4eki1jVzaMsv4OaZw3RH4tpi8uJLKmqPg7HICg0sHqPLbBQP8L0NO0W0AiIDMyU_etKgqCVP6tvg==",
+            "functionCall": {
+              "id": "adk-5407f745-1333-4075-8ad8-796b40803c49",
+              "args": {
+                "debug_mode": false
+              },
+              "name": "initiate_payment"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5780
+          }
+        ],
+        "cachedContentTokenCount": 5780,
+        "candidatesTokenCount": 17,
+        "promptTokenCount": 7808,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7808
+          }
+        ],
+        "thoughtsTokenCount": 55,
+        "totalTokenCount": 7880
+      },
+      "invocationId": "e-f0cd8c0b-6b34-4dc8-bd4a-c0bda9eedcab",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "e2918ec7-6aba-4849-8dac-53a3bcf9314c",
+      "timestamp": 1763516550.61755
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-5407f745-1333-4075-8ad8-796b40803c49",
+              "name": "initiate_payment",
+              "response": {
+                "result": {
+                  "message": {
+                    "contextId": "d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d",
+                    "kind": "message",
+                    "messageId": "f1119e97-d658-4208-894c-8e992f506621",
+                    "parts": [
+                      {
+                        "kind": "text",
+                        "text": "Please provide the challenge response to complete the payment."
+                      },
+                      {
+                        "data": {
+                          "challenge": {
+                            "type": "otp",
+                            "display_text": "The payment method issuer sent a verification code to the phone number on file, please enter it below. It will be shared with the issuer so they can authorize the transaction.(Demo only hint: the code is 123)"
+                          }
+                        },
+                        "kind": "data"
+                      }
+                    ],
+                    "role": "agent",
+                    "taskId": "f93cfc7f-6f49-490a-b36a-7a96acb26189"
+                  },
+                  "state": "input-required",
+                  "timestamp": "2025-11-19T01:42:37.282686+00:00"
+                }
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-f0cd8c0b-6b34-4dc8-bd4a-c0bda9eedcab",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {
+          "initiate_payment_task_id": "bd09d161-dd72-440f-895a-a542c257e762"
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "08581439-df3e-4fc8-bc43-6d6caf0fcb8f",
+      "timestamp": 1763516557.28441
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "The payment method issuer sent a verification code to the phone number on file, please enter it below. It will be shared with the issuer so they can authorize the transaction.(Demo only hint: the code is 123)"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7663
+          }
+        ],
+        "cachedContentTokenCount": 7663,
+        "candidatesTokenCount": 46,
+        "promptTokenCount": 8114,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 8114
+          }
+        ],
+        "totalTokenCount": 8160
+      },
+      "invocationId": "e-f0cd8c0b-6b34-4dc8-bd4a-c0bda9eedcab",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "5f0f0172-561d-416b-96b9-d4b4acf7b1e2",
+      "timestamp": 1763516557.288358
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "123"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-96bbf2fd-736b-4d60-9054-96eec61a259f",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "12436f7b-a106-41a6-8030-0279848137da",
+      "timestamp": 1763516572.056243
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CpgCAdHtim_L59N_gdOzEwsN_u-vAK1ryWbvHTwCaT0so2yZ0WOnWrxAj_p8Tq1rieXlB2QcLXzAHxvh2Dxj64yILm5a7BFuru9NQRf65sfIFcfxmAHd8S-DtzqNcuIE4XOAlza9TilE1WJ6FlaS7PUGFX_dRSgTQtsNbiXRYiRLLsSqvirnZgn-N_p_ErHYOvLhZdFgv-09oX3dZBjrmtOqnKA86BsAdgXn1ISAZweV674V8zTS23FeRnRR-4YSVlgzuk-dEckWWo8kugxOtJWcYl75DFPlD8GHMDhrG9RAxBoZFP3AdMqxT9bD4xYrPgzUCVnpZpNf4DNdE93pPD6ZevsVkGaYcI7Ou2ZkNksYhG61yxy-hxjE0Q==",
+            "functionCall": {
+              "id": "adk-0d618f44-1ccb-47ef-bfde-bcae070795a3",
+              "args": {
+                "debug_mode": false,
+                "challenge_response": "123"
+              },
+              "name": "initiate_payment_with_otp"
+            }
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7709
+          }
+        ],
+        "cachedContentTokenCount": 7709,
+        "candidatesTokenCount": 30,
+        "promptTokenCount": 8165,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 8165
+          }
+        ],
+        "thoughtsTokenCount": 61,
+        "totalTokenCount": 8256
+      },
+      "invocationId": "e-96bbf2fd-736b-4d60-9054-96eec61a259f",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "longRunningToolIds": [],
+      "id": "1283a8af-8ebf-46b1-a46d-2383e4c2c408",
+      "timestamp": 1763516572.061175
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "functionResponse": {
+              "id": "adk-0d618f44-1ccb-47ef-bfde-bcae070795a3",
+              "name": "initiate_payment_with_otp",
+              "response": {
+                "result": {
+                  "message": {
+                    "contextId": "d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d",
+                    "kind": "message",
+                    "messageId": "c6bf377c-9834-4ca5-bdea-e1ba0a6f257a",
+                    "parts": [
+                      {
+                        "kind": "text",
+                        "text": "{'status': 'success'}"
+                      }
+                    ],
+                    "role": "agent",
+                    "taskId": "f93cfc7f-6f49-490a-b36a-7a96acb26189"
+                  },
+                  "state": "completed",
+                  "timestamp": "2025-11-19T01:43:03.874193+00:00"
+                }
+              }
+            }
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-96bbf2fd-736b-4d60-9054-96eec61a259f",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {
+          "payment_receipt": {
+            "payment_mandate_id": "726348364a91446aaa9a0bd27e6fe8fb",
+            "timestamp": "2025-11-19T01:43:02.364171+00:00",
+            "payment_id": "b8b4292687484d5692042b4ec6cd7963",
+            "amount": {
+              "currency": "KRW",
+              "value": 25003.5
+            },
+            "payment_status": {
+              "merchant_confirmation_id": "b8b4292687484d5692042b4ec6cd7963",
+              "psp_confirmation_id": "b8b4292687484d5692042b4ec6cd7963"
+            },
+            "payment_method_details": {
+              "method_name": "CARD"
+            }
+          }
+        },
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "bf6753f5-9a9c-4c6c-a060-31c8bc9abaa9",
+      "timestamp": 1763516583.87627
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "**결제 영수증**\n\n*   **상품:** 기본형 내구성이 뛰어난 커피포트\n*   **가격:** ₩25,003.50\n*   **배송비:** US$2.00\n*   **세금:** US$1.50\n*   **총 가격:** ₩25,003.50\n\n**배송 주소:**\nBugs Bunny\nSample Organization\n123 Main St\nSample City, ST 00000\nUS\n+1-000-000-0000\n\n**결제 방법:**\nAmerican Express ending in 4444"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7658
+          }
+        ],
+        "cachedContentTokenCount": 7658,
+        "candidatesTokenCount": 150,
+        "promptTokenCount": 8408,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 8408
+          }
+        ],
+        "totalTokenCount": 8558
+      },
+      "invocationId": "e-96bbf2fd-736b-4d60-9054-96eec61a259f",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "5d4914a4-578a-4a7d-85b8-ed393536e210",
+      "timestamp": 1763516583.879884
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "good 결제단계까지 끝난거지 ?"
+          }
+        ],
+        "role": "user"
+      },
+      "invocationId": "e-2932bcd6-4ff8-4de3-b6f0-ba09b50e18ad",
+      "author": "user",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "2c728c18-a58a-4472-a1ab-b67e4460e013",
+      "timestamp": 1763516605.026358
+    },
+    {
+      "content": {
+        "parts": [
+          {
+            "thoughtSignature": "CvYCAdHtim8sMaZZwcz7krBYCXHLxWVWtVKLYAReHVSgFT4SYAx22J-hubgUg3148WnsFwJVh8iAbcaLbvW7ffXa_86U2v5pQSiWxkCTHKyPbCsKjb7yzD89sQ83t0o3gxvokEV9AzxNqxp8L3ac8Pl8gOr4dvfpLqiR_GBeUWNOJYpK_uzFpYmuFSoZgRbVwVT49Ev0miVN1ZUWwXecJ8cFivgYxWCdCfxsr1Z7D1h28kbCQ77SYJN5KC_4Obg-H0z3EPqy_GRMw2zJE4QfXF49FhZV4L6UvGT3qjcJeXvR9rFWK0q_675K0pzvS84w-lMK3IO1Ofj_A5XiWaRB1zkwyL8636vOo5zcYsoNHsDj2vh4OA14N4rnknf-zfjc1tivTq28CMAARz1tXFsyKir78f16sM_PwCUL3CpCC10bwdJJid9wA8dUpmepkEDunnG2Z1USNIoANi4WAF1V9EHDtQafzcuBSO2PjHOACcDXH8Lw-KIWywU=",
+            "text": "네, 결제 단계까지 성공적으로 완료되었습니다. 방금 보여드린 영수증으로 확인하실 수 있습니다."
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "usageMetadata": {
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 7714
+          }
+        ],
+        "cachedContentTokenCount": 7714,
+        "candidatesTokenCount": 25,
+        "promptTokenCount": 8570,
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 8570
+          }
+        ],
+        "thoughtsTokenCount": 76,
+        "totalTokenCount": 8671
+      },
+      "invocationId": "e-2932bcd6-4ff8-4de3-b6f0-ba09b50e18ad",
+      "author": "root_agent",
+      "actions": {
+        "stateDelta": {},
+        "artifactDelta": {},
+        "requestedAuthConfigs": {}
+      },
+      "id": "b026846f-92ab-4777-b0f3-638591e3f64b",
+      "timestamp": 1763516605.031004
+    }
+  ],
+  "lastUpdateTime": 1763516605.031004
+}

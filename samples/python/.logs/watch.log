@@ -1,0 +1,494 @@
+MerchantAgent listening on http://localhost:8001
+CredentialsProvider listening on http://localhost:8002
+merchant_payment_processor_agent listening on http://localhost:8003
+
+
+
+
+---------- New Agent Request Received---------
+GET http://localhost:8001/a2a/merchant_agent/.well-known/agent-card.json
+
+
+[Request Body]
+<empty>
+
+
+[Response Body]
+{"capabilities":{"extensions":[{"description":"Supports the Agent Payments Protocol.","required":true,"uri":"https://github.com/google-agentic-commerce/ap2/v1"},{"description":"Supports the Sample Card Network payment method extension","required":true,"uri":"https://sample-card-network.github.io/paymentmethod/types/v1"}]},"defaultInputModes":["json"],"defaultOutputModes":["json"],"description":"A sales assistant agent for a merchant.","name":"MerchantAgent","preferredTransport":"JSONRPC","protocolVersion":"0.3.0","skills":[{"description":"Searches the merchant's catalog based on a shopping intent & returns a cart containing the top results.","id":"search_catalog","name":"Search Catalog","tags":["merchant","search","catalog"]}],"url":"http://localhost:8001/a2a/merchant_agent","version":"1.0.0"}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8001/a2a/merchant_agent
+
+
+[Request Body]
+{'id': 'fce6c32a-4f61-4c87-9717-a0b3fad9b0c0', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'kind': 'message', 'messageId': '137b2cdaad914f1295d834ee06224538', 'parts': [{'kind': 'text', 'text': "Find products that match the user's IntentMandate."}, {'data': {'ap2.mandates.IntentMandate': {'user_cart_confirmation_required': True, 'natural_language_description': '싸고 튼튼한 커피포트', 'merchants': [], 'skus': [], 'requires_refundability': True, 'intent_expiry': '2025-11-20T01:38:21.148336+00:00'}}, 'kind': 'data'}, {'data': {'risk_data': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data'}, 'kind': 'data'}, {'data': {'shopping_agent_id': 'trusted_shopping_agent'}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+["Find products that match the user's IntentMandate."]
+
+
+[An Intent Mandate was in the request Data]
+{'user_cart_confirmation_required': True, 'natural_language_description': '싸고 튼튼한 커피포트', 'merchants': [], 'skus': [], 'requires_refundability': True, 'intent_expiry': '2025-11-20T01:38:21.148336+00:00'}
+
+
+[Data Part: risk_data] 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data
+
+
+[Data Part: shopping_agent_id] 
+trusted_shopping_agent
+
+
+[Response Body]
+{"id":"fce6c32a-4f61-4c87-9717-a0b3fad9b0c0","jsonrpc":"2.0","result":{"artifacts":[{"artifactId":"1ef8c917-b830-42b9-bd14-59e5bf237017","parts":[{"data":{"ap2.mandates.CartMandate":{"contents":{"id":"cart_1","user_cart_confirmation_required":true,"payment_request":{"method_data":[{"supported_methods":"CARD","data":{"network":["mastercard","paypal","amex"]}}],"details":{"id":"order_1","display_items":[{"label":"기본형 내구성이 뛰어난 커피포트","amount":{"currency":"KRW","value":25000.0},"pending":null,"refund_period":30}],"shipping_options":null,"modifiers":null,"total":{"label":"Total","amount":{"currency":"KRW","value":25000.0},"pending":null,"refund_period":30}},"options":{"request_payer_name":false,"request_payer_email":false,"request_payer_phone":false,"request_shipping":true,"shipping_type":null},"shipping_address":null},"cart_expiry":"2025-11-19T02:08:42.615807+00:00","merchant_name":"Generic Merchant"},"merchant_authorization":null}},"kind":"data"}]},{"artifactId":"d9be6626-149a-40d7-a3e1-138907d21a8b","parts":[{"data":{"ap2.mandates.CartMandate":{"contents":{"id":"cart_2","user_cart_confirmation_required":true,"payment_request":{"method_data":[{"supported_methods":"CARD","data":{"network":["mastercard","paypal","amex"]}}],"details":{"id":"order_2","display_items":[{"label":"스테인리스 스틸 견고한 전기 커피포트","amount":{"currency":"KRW","value":32000.0},"pending":false,"refund_period":30}],"shipping_options":null,"modifiers":null,"total":{"label":"Total","amount":{"currency":"KRW","value":32000.0},"pending":null,"refund_period":30}},"options":{"request_payer_name":false,"request_payer_email":false,"request_payer_phone":false,"request_shipping":true,"shipping_type":null},"shipping_address":null},"cart_expiry":"2025-11-19T02:08:42.615807+00:00","merchant_name":"Generic Merchant"},"merchant_authorization":null}},"kind":"data"}]},{"artifactId":"9ca44164-e008-408d-b909-5a636ab79d06","parts":[{"data":{"ap2.mandates.CartMandate":{"contents":{"id":"cart_3","user_cart_confirmation_required":true,"payment_request":{"method_data":[{"supported_methods":"CARD","data":{"network":["mastercard","paypal","amex"]}}],"details":{"id":"order_3","display_items":[{"label":"간편하고 튼튼한 미니 커피포트","amount":{"currency":"KRW","value":18000.0},"pending":null,"refund_period":30}],"shipping_options":null,"modifiers":null,"total":{"label":"Total","amount":{"currency":"KRW","value":18000.0},"pending":null,"refund_period":30}},"options":{"request_payer_name":false,"request_payer_email":false,"request_payer_phone":false,"request_shipping":true,"shipping_type":null},"shipping_address":null},"cart_expiry":"2025-11-19T02:08:42.615807+00:00","merchant_name":"Generic Merchant"},"merchant_authorization":null}},"kind":"data"}]}],"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"137b2cdaad914f1295d834ee06224538","parts":[{"kind":"text","text":"Find products that match the user's IntentMandate."},{"data":{"ap2.mandates.IntentMandate":{"user_cart_confirmation_required":true,"natural_language_description":"싸고 튼튼한 커피포트","merchants":[],"skus":[],"requires_refundability":true,"intent_expiry":"2025-11-20T01:38:21.148336+00:00"}},"kind":"data"},{"data":{"risk_data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"},"kind":"data"},{"data":{"shopping_agent_id":"trusted_shopping_agent"},"kind":"data"}],"role":"agent","taskId":"9f63abf1-e983-43be-bffa-343fe13ad53c"}],"id":"9f63abf1-e983-43be-bffa-343fe13ad53c","kind":"task","status":{"state":"completed","timestamp":"2025-11-19T01:38:42.641058+00:00"}}}
+
+
+
+
+---------- New Agent Request Received---------
+GET http://localhost:8002/a2a/credentials_provider/.well-known/agent-card.json
+
+
+[Request Body]
+<empty>
+
+
+[Response Body]
+{"capabilities":{"extensions":[{"description":"Supports the Agent Payments Protocol.","required":true,"uri":"https://github.com/google-agentic-commerce/ap2/v1"},{"description":"Supports the Sample Card Network payment method extension","required":true,"uri":"https://sample-card-network.github.io/paymentmethod/types/v1"}]},"defaultInputModes":["text/plain"],"defaultOutputModes":["application/json"],"description":"An agent that holds a user's payment credentials.","name":"CredentialsProvider","preferredTransport":"JSONRPC","protocolVersion":"0.3.0","skills":[{"description":"Initiates a payment with the correct payment processor.","id":"initiate_payment","name":"Initiate Payment","tags":["payments"]},{"description":"Provides a list of eligible payment methods for a particular purchase.","id":"get_eligible_payment_methods","name":"Get Eligible Payment Methods","tags":["eligible","payment","methods"]},{"description":"Fetches the shipping address from a user's wallet.","id":"get_account_shipping_address","name":"Get Shipping Address","tags":["account","shipping"]}],"url":"http://localhost:8002/a2a/credentials_provider","version":"1.0.0"}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8002/a2a/credentials_provider
+
+
+[Request Body]
+{'id': '0848666b-37c7-4377-9d4b-89d6d6c5f1ad', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': 'cc676f0fd49a478ba87a03312a7f04b3', 'parts': [{'kind': 'text', 'text': "Get the user's shipping address."}, {'data': {'user_email': 'bugsbunny@gmail.com'}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+["Get the user's shipping address."]
+
+
+[Data Part: user_email] 
+bugsbunny@gmail.com
+
+
+[Response Body]
+{"id":"0848666b-37c7-4377-9d4b-89d6d6c5f1ad","jsonrpc":"2.0","result":{"artifacts":[{"artifactId":"d0c93d79-9147-48d0-9235-29ef29415878","parts":[{"data":{"contact_picker.ContactAddress":{"recipient":"Bugs Bunny","organization":"Sample Organization","address_line":["123 Main St"],"city":"Sample City","region":"ST","postal_code":"00000","country":"US","phone_number":"+1-000-000-0000"}},"kind":"data"}]}],"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"cc676f0fd49a478ba87a03312a7f04b3","parts":[{"kind":"text","text":"Get the user's shipping address."},{"data":{"user_email":"bugsbunny@gmail.com"},"kind":"data"}],"role":"agent","taskId":"2d594069-bf68-41d2-80ae-7b9c5505cc2d"}],"id":"2d594069-bf68-41d2-80ae-7b9c5505cc2d","kind":"task","status":{"state":"completed","timestamp":"2025-11-19T01:40:33.932233+00:00"}}}
+
+
+
+
+---------- New Agent Request Received---------
+GET http://localhost:8001/a2a/merchant_agent/.well-known/agent-card.json
+
+
+[Request Body]
+<empty>
+
+
+[Response Body]
+{"capabilities":{"extensions":[{"description":"Supports the Agent Payments Protocol.","required":true,"uri":"https://github.com/google-agentic-commerce/ap2/v1"},{"description":"Supports the Sample Card Network payment method extension","required":true,"uri":"https://sample-card-network.github.io/paymentmethod/types/v1"}]},"defaultInputModes":["json"],"defaultOutputModes":["json"],"description":"A sales assistant agent for a merchant.","name":"MerchantAgent","preferredTransport":"JSONRPC","protocolVersion":"0.3.0","skills":[{"description":"Searches the merchant's catalog based on a shopping intent & returns a cart containing the top results.","id":"search_catalog","name":"Search Catalog","tags":["merchant","search","catalog"]}],"url":"http://localhost:8001/a2a/merchant_agent","version":"1.0.0"}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8001/a2a/merchant_agent
+
+
+[Request Body]
+{'id': '7d1c66ff-7b02-45c8-9cd9-bbfa200555f5', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': 'b429ffdb43f148efa75cd160f53343d7', 'parts': [{'kind': 'text', 'text': "Update the cart with the user's shipping address."}, {'data': {'cart_id': 'cart_1'}, 'kind': 'data'}, {'data': {'shipping_address': {'phone_number': '+1-000-000-0000', 'country': 'US', 'recipient': 'Bugs Bunny', 'organization': 'Sample Organization', 'address_line': ['123 Main St'], 'city': 'Sample City', 'postal_code': '00000', 'region': 'ST'}}, 'kind': 'data'}, {'data': {'shopping_agent_id': 'trusted_shopping_agent'}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+["Update the cart with the user's shipping address."]
+
+
+[Data Part: cart_id] 
+cart_1
+
+
+[Data Part: shipping_address] 
+{'phone_number': '+1-000-000-0000', 'country': 'US', 'recipient': 'Bugs Bunny', 'organization': 'Sample Organization', 'address_line': ['123 Main St'], 'city': 'Sample City', 'postal_code': '00000', 'region': 'ST'}
+
+
+[Data Part: shopping_agent_id] 
+trusted_shopping_agent
+
+
+[Response Body]
+{"id":"7d1c66ff-7b02-45c8-9cd9-bbfa200555f5","jsonrpc":"2.0","result":{"artifacts":[{"artifactId":"4dee18b8-fed3-491e-b35a-d4f669c3251a","parts":[{"data":{"ap2.mandates.CartMandate":{"contents":{"id":"cart_1","user_cart_confirmation_required":true,"payment_request":{"method_data":[{"supported_methods":"CARD","data":{"network":["mastercard","paypal","amex"]}}],"details":{"id":"order_1","display_items":[{"label":"기본형 내구성이 뛰어난 커피포트","amount":{"currency":"KRW","value":25003.5},"pending":null,"refund_period":30},{"label":"Shipping","amount":{"currency":"USD","value":2.0},"pending":null,"refund_period":30},{"label":"Tax","amount":{"currency":"USD","value":1.5},"pending":null,"refund_period":30}],"shipping_options":null,"modifiers":null,"total":{"label":"Total","amount":{"currency":"KRW","value":25003.5},"pending":null,"refund_period":30}},"options":{"request_payer_name":false,"request_payer_email":false,"request_payer_phone":false,"request_shipping":true,"shipping_type":null},"shipping_address":{"city":"Sample City","country":"US","dependent_locality":null,"organization":"Sample Organization","phone_number":"+1-000-000-0000","postal_code":"00000","recipient":"Bugs Bunny","region":"ST","sorting_code":null,"address_line":["123 Main St"]}},"cart_expiry":"2025-11-19T02:08:42.615807+00:00","merchant_name":"Generic Merchant"},"merchant_authorization":"eyJhbGciOiJSUzI1NiIsImtpZIwMjQwOTA..."}},"kind":"data"},{"data":{"risk_data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"},"kind":"data"}]}],"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"b429ffdb43f148efa75cd160f53343d7","parts":[{"kind":"text","text":"Update the cart with the user's shipping address."},{"data":{"cart_id":"cart_1"},"kind":"data"},{"data":{"shipping_address":{"phone_number":"+1-000-000-0000","country":"US","recipient":"Bugs Bunny","organization":"Sample Organization","address_line":["123 Main St"],"city":"Sample City","postal_code":"00000","region":"ST"}},"kind":"data"},{"data":{"shopping_agent_id":"trusted_shopping_agent"},"kind":"data"}],"role":"agent","taskId":"b91e8e74-1b7e-4ef1-8a9c-1a55da68050c"}],"id":"b91e8e74-1b7e-4ef1-8a9c-1a55da68050c","kind":"task","status":{"state":"completed","timestamp":"2025-11-19T01:41:11.363739+00:00"}}}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8002/a2a/credentials_provider
+
+
+[Request Body]
+{'id': '5b96b93b-4c21-4dd2-ae27-5b7bbe637e61', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': '816c1cd129964bffa89b21f87a970534', 'parts': [{'kind': 'text', 'text': "Get a filtered list of the user's payment methods."}, {'data': {'user_email': 'bugsbunny@gmail.com'}, 'kind': 'data'}, {'data': {'payment_request.PaymentMethodData': {'supported_methods': 'CARD', 'data': {'network': ['mastercard', 'paypal', 'amex']}}}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+["Get a filtered list of the user's payment methods."]
+
+
+[Data Part: user_email] 
+bugsbunny@gmail.com
+
+
+[Data Part: payment_request.PaymentMethodData] 
+{'supported_methods': 'CARD', 'data': {'network': ['mastercard', 'paypal', 'amex']}}
+
+
+[Response Body]
+{"id":"5b96b93b-4c21-4dd2-ae27-5b7bbe637e61","jsonrpc":"2.0","result":{"artifacts":[{"artifactId":"95afe7e1-704e-43e2-a94f-99d1dbf2d7eb","parts":[{"data":{"payment_method_aliases":["American Express ending in 4444","American Express ending in 8888"]},"kind":"data"}]}],"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"816c1cd129964bffa89b21f87a970534","parts":[{"kind":"text","text":"Get a filtered list of the user's payment methods."},{"data":{"user_email":"bugsbunny@gmail.com"},"kind":"data"},{"data":{"payment_request.PaymentMethodData":{"supported_methods":"CARD","data":{"network":["mastercard","paypal","amex"]}}},"kind":"data"}],"role":"agent","taskId":"a66cf492-3140-4629-9a9a-a61140a4ec68"}],"id":"a66cf492-3140-4629-9a9a-a61140a4ec68","kind":"task","status":{"state":"completed","timestamp":"2025-11-19T01:41:25.140773+00:00"}}}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8002/a2a/credentials_provider
+
+
+[Request Body]
+{'id': 'f363f24f-c925-4524-8756-3d1d3e3bd23f', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': '8e396f9be7574ecd8f0a12e14c6d22a8', 'parts': [{'kind': 'text', 'text': "Get a payment credential token for the user's payment method."}, {'data': {'payment_method_alias': 'American Express ending in 4444'}, 'kind': 'data'}, {'data': {'user_email': 'bugsbunny@gmail.com'}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+["Get a payment credential token for the user's payment method."]
+
+
+[Data Part: payment_method_alias] 
+American Express ending in 4444
+
+
+[Data Part: user_email] 
+bugsbunny@gmail.com
+
+
+[Response Body]
+{"id":"f363f24f-c925-4524-8756-3d1d3e3bd23f","jsonrpc":"2.0","result":{"artifacts":[{"artifactId":"4ee7697a-a795-4e22-858e-15346147a69f","parts":[{"data":{"token":"fake_payment_credential_token_0"},"kind":"data"}]}],"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"8e396f9be7574ecd8f0a12e14c6d22a8","parts":[{"kind":"text","text":"Get a payment credential token for the user's payment method."},{"data":{"payment_method_alias":"American Express ending in 4444"},"kind":"data"},{"data":{"user_email":"bugsbunny@gmail.com"},"kind":"data"}],"role":"agent","taskId":"b1475ec1-a7b7-488a-a22a-4b75545ad6c4"}],"id":"b1475ec1-a7b7-488a-a22a-4b75545ad6c4","kind":"task","status":{"state":"completed","timestamp":"2025-11-19T01:41:45.690547+00:00"}}}
+
+
+
+
+---------- New Agent Request Received---------
+GET http://localhost:8002/a2a/credentials_provider/.well-known/agent-card.json
+
+
+[Request Body]
+<empty>
+
+
+[Response Body]
+{"capabilities":{"extensions":[{"description":"Supports the Agent Payments Protocol.","required":true,"uri":"https://github.com/google-agentic-commerce/ap2/v1"},{"description":"Supports the Sample Card Network payment method extension","required":true,"uri":"https://sample-card-network.github.io/paymentmethod/types/v1"}]},"defaultInputModes":["text/plain"],"defaultOutputModes":["application/json"],"description":"An agent that holds a user's payment credentials.","name":"CredentialsProvider","preferredTransport":"JSONRPC","protocolVersion":"0.3.0","skills":[{"description":"Initiates a payment with the correct payment processor.","id":"initiate_payment","name":"Initiate Payment","tags":["payments"]},{"description":"Provides a list of eligible payment methods for a particular purchase.","id":"get_eligible_payment_methods","name":"Get Eligible Payment Methods","tags":["eligible","payment","methods"]},{"description":"Fetches the shipping address from a user's wallet.","id":"get_account_shipping_address","name":"Get Shipping Address","tags":["account","shipping"]}],"url":"http://localhost:8002/a2a/credentials_provider","version":"1.0.0"}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8002/a2a/credentials_provider
+
+
+[Request Body]
+{'id': '09c09f94-f037-4f9a-93f8-aa5d5ec165d7', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': 'fd62d549eb9f4dd1b7dd47d0cf38b5bd', 'parts': [{'kind': 'text', 'text': 'This is the signed payment mandate'}, {'data': {'ap2.mandates.PaymentMandate': {'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'address_line': ['123 Main St']}, 'payer_email': 'bugsbunny@gmail.com'}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}}, 'kind': 'data'}, {'data': {'risk_data': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data'}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+['This is the signed payment mandate']
+
+
+[A Payment Mandate was in the request Data]
+{'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'address_line': ['123 Main St']}, 'payer_email': 'bugsbunny@gmail.com'}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}
+
+
+[Data Part: risk_data] 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data
+
+
+[Response Body]
+{"id":"09c09f94-f037-4f9a-93f8-aa5d5ec165d7","jsonrpc":"2.0","result":{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"fd62d549eb9f4dd1b7dd47d0cf38b5bd","parts":[{"kind":"text","text":"This is the signed payment mandate"},{"data":{"ap2.mandates.PaymentMandate":{"payment_mandate_contents":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","payment_details_id":"order_1","payment_details_total":{"label":"Total","amount":{"currency":"KRW","value":25003.5},"refund_period":30},"payment_response":{"request_id":"order_1","method_name":"CARD","details":{"token":{"value":"fake_payment_credential_token_0","url":"http://localhost:8002/a2a/credentials_provider"}},"shipping_address":{"city":"Sample City","country":"US","organization":"Sample Organization","phone_number":"+1-000-000-0000","postal_code":"00000","recipient":"Bugs Bunny","region":"ST","address_line":["123 Main St"]},"payer_email":"bugsbunny@gmail.com"},"merchant_agent":"Generic Merchant","timestamp":"2025-11-19T01:41:51.359061+00:00"},"user_authorization":"fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"}},"kind":"data"},{"data":{"risk_data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"},"kind":"data"}],"role":"agent","taskId":"d58c5cf1-cdec-442c-9401-b6932cd5b0e6"}],"id":"d58c5cf1-cdec-442c-9401-b6932cd5b0e6","kind":"task","status":{"state":"completed","timestamp":"2025-11-19T01:42:05.181402+00:00"}}}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8001/a2a/merchant_agent
+
+
+[Request Body]
+{'id': 'd2bcd3df-dde2-4269-b24a-98d8b33a4dbd', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': 'ad657a16735a4d17b35a780b3468ffd8', 'parts': [{'kind': 'text', 'text': 'Initiate a payment'}, {'data': {'ap2.mandates.PaymentMandate': {'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'address_line': ['123 Main St']}, 'payer_email': 'bugsbunny@gmail.com'}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}}, 'kind': 'data'}, {'data': {'risk_data': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data'}, 'kind': 'data'}, {'data': {'shopping_agent_id': 'trusted_shopping_agent'}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+['Initiate a payment']
+
+
+[A Payment Mandate was in the request Data]
+{'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'address_line': ['123 Main St']}, 'payer_email': 'bugsbunny@gmail.com'}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}
+
+
+[Data Part: risk_data] 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data
+
+
+[Data Part: shopping_agent_id] 
+trusted_shopping_agent
+
+
+[Response Body]
+{"id":"d2bcd3df-dde2-4269-b24a-98d8b33a4dbd","jsonrpc":"2.0","result":{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"ad657a16735a4d17b35a780b3468ffd8","parts":[{"kind":"text","text":"Initiate a payment"},{"data":{"ap2.mandates.PaymentMandate":{"payment_mandate_contents":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","payment_details_id":"order_1","payment_details_total":{"label":"Total","amount":{"currency":"KRW","value":25003.5},"refund_period":30},"payment_response":{"request_id":"order_1","method_name":"CARD","details":{"token":{"value":"fake_payment_credential_token_0","url":"http://localhost:8002/a2a/credentials_provider"}},"shipping_address":{"city":"Sample City","country":"US","organization":"Sample Organization","phone_number":"+1-000-000-0000","postal_code":"00000","recipient":"Bugs Bunny","region":"ST","address_line":["123 Main St"]},"payer_email":"bugsbunny@gmail.com"},"merchant_agent":"Generic Merchant","timestamp":"2025-11-19T01:41:51.359061+00:00"},"user_authorization":"fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"}},"kind":"data"},{"data":{"risk_data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"},"kind":"data"},{"data":{"shopping_agent_id":"trusted_shopping_agent"},"kind":"data"}],"role":"agent","taskId":"8b0dff40-c2c1-4ef8-96b9-1ef7676279af"}],"id":"8b0dff40-c2c1-4ef8-96b9-1ef7676279af","kind":"task","status":{"message":{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"d25b9824-69f2-4603-93fa-8191e8a9d194","parts":[{"kind":"text","text":"An error occurred: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/usage?tab=rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-2.5-flash\\nPlease retry in 52.136229975s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '52s'}]}}"}],"role":"agent","taskId":"8b0dff40-c2c1-4ef8-96b9-1ef7676279af"},"state":"failed","timestamp":"2025-11-19T01:42:08.066308+00:00"}}}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8001/a2a/merchant_agent
+
+
+[Request Body]
+{'id': '80c25688-1c68-4359-a702-803a90272282', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': '23ea84831ef74801923808eec52fd310', 'parts': [{'kind': 'text', 'text': 'Initiate a payment'}, {'data': {'ap2.mandates.PaymentMandate': {'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'address_line': ['123 Main St']}, 'payer_email': 'bugsbunny@gmail.com'}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}}, 'kind': 'data'}, {'data': {'risk_data': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data'}, 'kind': 'data'}, {'data': {'shopping_agent_id': 'trusted_shopping_agent'}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+['Initiate a payment']
+
+
+[A Payment Mandate was in the request Data]
+{'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'address_line': ['123 Main St']}, 'payer_email': 'bugsbunny@gmail.com'}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}
+
+
+[Data Part: risk_data] 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data
+
+
+[Data Part: shopping_agent_id] 
+trusted_shopping_agent
+
+
+
+
+---------- New Agent Request Received---------
+GET http://localhost:8003/a2a/merchant_payment_processor_agent/.well-known/agent-card.json
+
+
+[Request Body]
+<empty>
+
+
+[Response Body]
+{"capabilities":{"extensions":[{"description":"Supports the Agent Payments Protocol.","required":true,"uri":"https://github.com/google-agentic-commerce/ap2/v1"},{"description":"Supports the Sample Card Network payment method extension","required":true,"uri":"https://sample-card-network.github.io/paymentmethod/types/v1"}]},"defaultInputModes":["text/plain"],"defaultOutputModes":["application/json"],"description":"An agent that processes card payments on behalf of a merchant.","name":"merchant_payment_processor_agent","preferredTransport":"JSONRPC","protocolVersion":"0.3.0","skills":[{"description":"Processes card payments.","id":"card-processor","name":"Card Processor","tags":["payment","card"]}],"url":"http://localhost:8003/a2a/merchant_payment_processor_agent","version":"1.0.0"}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8003/a2a/merchant_payment_processor_agent
+
+
+[Request Body]
+{'id': '79d50dc3-0db6-41cc-a60d-72a0e789e33e', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': 'fce88af6551d4da1901e03eafb5e049c', 'parts': [{'kind': 'text', 'text': 'initiate_payment'}, {'data': {'ap2.mandates.PaymentMandate': {'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'pending': None, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'dependent_locality': None, 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'sorting_code': None, 'address_line': ['123 Main St']}, 'shipping_option': None, 'payer_name': None, 'payer_email': 'bugsbunny@gmail.com', 'payer_phone': None}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}}, 'kind': 'data'}, {'data': {'risk_data': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data'}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+['initiate_payment']
+
+
+[A Payment Mandate was in the request Data]
+{'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'pending': None, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'dependent_locality': None, 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'sorting_code': None, 'address_line': ['123 Main St']}, 'shipping_option': None, 'payer_name': None, 'payer_email': 'bugsbunny@gmail.com', 'payer_phone': None}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}
+
+
+[Data Part: risk_data] 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data
+
+
+[Response Body]
+{"id":"79d50dc3-0db6-41cc-a60d-72a0e789e33e","jsonrpc":"2.0","result":{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"fce88af6551d4da1901e03eafb5e049c","parts":[{"kind":"text","text":"initiate_payment"},{"data":{"ap2.mandates.PaymentMandate":{"payment_mandate_contents":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","payment_details_id":"order_1","payment_details_total":{"label":"Total","amount":{"currency":"KRW","value":25003.5},"pending":null,"refund_period":30},"payment_response":{"request_id":"order_1","method_name":"CARD","details":{"token":{"value":"fake_payment_credential_token_0","url":"http://localhost:8002/a2a/credentials_provider"}},"shipping_address":{"city":"Sample City","country":"US","dependent_locality":null,"organization":"Sample Organization","phone_number":"+1-000-000-0000","postal_code":"00000","recipient":"Bugs Bunny","region":"ST","sorting_code":null,"address_line":["123 Main St"]},"shipping_option":null,"payer_name":null,"payer_email":"bugsbunny@gmail.com","payer_phone":null},"merchant_agent":"Generic Merchant","timestamp":"2025-11-19T01:41:51.359061+00:00"},"user_authorization":"fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"}},"kind":"data"},{"data":{"risk_data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"},"kind":"data"}],"role":"agent","taskId":"f93cfc7f-6f49-490a-b36a-7a96acb26189"}],"id":"f93cfc7f-6f49-490a-b36a-7a96acb26189","kind":"task","status":{"message":{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"f1119e97-d658-4208-894c-8e992f506621","parts":[{"kind":"text","text":"Please provide the challenge response to complete the payment."},{"data":{"challenge":{"type":"otp","display_text":"The payment method issuer sent a verification code to the phone number on file, please enter it below. It will be shared with the issuer so they can authorize the transaction.(Demo only hint: the code is 123)"}},"kind":"data"}],"role":"agent","taskId":"f93cfc7f-6f49-490a-b36a-7a96acb26189"},"state":"input-required","timestamp":"2025-11-19T01:42:37.280002+00:00"}}}
+
+
+[Response Body]
+{"id":"80c25688-1c68-4359-a702-803a90272282","jsonrpc":"2.0","result":{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"23ea84831ef74801923808eec52fd310","parts":[{"kind":"text","text":"Initiate a payment"},{"data":{"ap2.mandates.PaymentMandate":{"payment_mandate_contents":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","payment_details_id":"order_1","payment_details_total":{"label":"Total","amount":{"currency":"KRW","value":25003.5},"refund_period":30},"payment_response":{"request_id":"order_1","method_name":"CARD","details":{"token":{"value":"fake_payment_credential_token_0","url":"http://localhost:8002/a2a/credentials_provider"}},"shipping_address":{"city":"Sample City","country":"US","organization":"Sample Organization","phone_number":"+1-000-000-0000","postal_code":"00000","recipient":"Bugs Bunny","region":"ST","address_line":["123 Main St"]},"payer_email":"bugsbunny@gmail.com"},"merchant_agent":"Generic Merchant","timestamp":"2025-11-19T01:41:51.359061+00:00"},"user_authorization":"fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"}},"kind":"data"},{"data":{"risk_data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"},"kind":"data"},{"data":{"shopping_agent_id":"trusted_shopping_agent"},"kind":"data"}],"role":"agent","taskId":"bd09d161-dd72-440f-895a-a542c257e762"}],"id":"bd09d161-dd72-440f-895a-a542c257e762","kind":"task","status":{"message":{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"f1119e97-d658-4208-894c-8e992f506621","parts":[{"kind":"text","text":"Please provide the challenge response to complete the payment."},{"data":{"challenge":{"type":"otp","display_text":"The payment method issuer sent a verification code to the phone number on file, please enter it below. It will be shared with the issuer so they can authorize the transaction.(Demo only hint: the code is 123)"}},"kind":"data"}],"role":"agent","taskId":"f93cfc7f-6f49-490a-b36a-7a96acb26189"},"state":"input-required","timestamp":"2025-11-19T01:42:37.282686+00:00"}}}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8001/a2a/merchant_agent
+
+
+[Request Body]
+{'id': 'c53757da-10e0-4ef8-b40c-17489513cf78', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': '32e3e000023d4b5ea0a26389204d3d6a', 'parts': [{'kind': 'text', 'text': 'Initiate a payment. Include the challenge response.'}, {'data': {'ap2.mandates.PaymentMandate': {'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'address_line': ['123 Main St']}, 'payer_email': 'bugsbunny@gmail.com'}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}}, 'kind': 'data'}, {'data': {'shopping_agent_id': 'trusted_shopping_agent'}, 'kind': 'data'}, {'data': {'challenge_response': '123'}, 'kind': 'data'}, {'data': {'risk_data': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data'}, 'kind': 'data'}], 'role': 'agent', 'taskId': 'bd09d161-dd72-440f-895a-a542c257e762'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+['Initiate a payment. Include the challenge response.']
+
+
+[A Payment Mandate was in the request Data]
+{'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'address_line': ['123 Main St']}, 'payer_email': 'bugsbunny@gmail.com'}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}
+
+
+[Data Part: shopping_agent_id] 
+trusted_shopping_agent
+
+
+[Data Part: challenge_response] 
+123
+
+
+[Data Part: risk_data] 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data
+
+
+
+
+---------- New Agent Request Received---------
+GET http://localhost:8003/a2a/merchant_payment_processor_agent/.well-known/agent-card.json
+
+
+[Request Body]
+<empty>
+
+
+[Response Body]
+{"capabilities":{"extensions":[{"description":"Supports the Agent Payments Protocol.","required":true,"uri":"https://github.com/google-agentic-commerce/ap2/v1"},{"description":"Supports the Sample Card Network payment method extension","required":true,"uri":"https://sample-card-network.github.io/paymentmethod/types/v1"}]},"defaultInputModes":["text/plain"],"defaultOutputModes":["application/json"],"description":"An agent that processes card payments on behalf of a merchant.","name":"merchant_payment_processor_agent","preferredTransport":"JSONRPC","protocolVersion":"0.3.0","skills":[{"description":"Processes card payments.","id":"card-processor","name":"Card Processor","tags":["payment","card"]}],"url":"http://localhost:8003/a2a/merchant_payment_processor_agent","version":"1.0.0"}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8003/a2a/merchant_payment_processor_agent
+
+
+[Request Body]
+{'id': '9f1b230d-e093-4dda-8d93-ec1e2fda7e3c', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': '7b2419880d1144b7beaeb40dcf989155', 'parts': [{'kind': 'text', 'text': 'initiate_payment'}, {'data': {'ap2.mandates.PaymentMandate': {'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'pending': None, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'dependent_locality': None, 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'sorting_code': None, 'address_line': ['123 Main St']}, 'shipping_option': None, 'payer_name': None, 'payer_email': 'bugsbunny@gmail.com', 'payer_phone': None}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}}, 'kind': 'data'}, {'data': {'risk_data': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data'}, 'kind': 'data'}, {'data': {'challenge_response': '123'}, 'kind': 'data'}], 'role': 'agent', 'taskId': 'f93cfc7f-6f49-490a-b36a-7a96acb26189'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+['initiate_payment']
+
+
+[A Payment Mandate was in the request Data]
+{'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'pending': None, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'dependent_locality': None, 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'sorting_code': None, 'address_line': ['123 Main St']}, 'shipping_option': None, 'payer_name': None, 'payer_email': 'bugsbunny@gmail.com', 'payer_phone': None}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}
+
+
+[Data Part: risk_data] 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data
+
+
+[Data Part: challenge_response] 
+123
+
+
+
+
+---------- New Agent Request Received---------
+GET http://localhost:8002/a2a/credentials_provider/.well-known/agent-card.json
+
+
+[Request Body]
+<empty>
+
+
+[Response Body]
+{"capabilities":{"extensions":[{"description":"Supports the Agent Payments Protocol.","required":true,"uri":"https://github.com/google-agentic-commerce/ap2/v1"},{"description":"Supports the Sample Card Network payment method extension","required":true,"uri":"https://sample-card-network.github.io/paymentmethod/types/v1"}]},"defaultInputModes":["text/plain"],"defaultOutputModes":["application/json"],"description":"An agent that holds a user's payment credentials.","name":"CredentialsProvider","preferredTransport":"JSONRPC","protocolVersion":"0.3.0","skills":[{"description":"Initiates a payment with the correct payment processor.","id":"initiate_payment","name":"Initiate Payment","tags":["payments"]},{"description":"Provides a list of eligible payment methods for a particular purchase.","id":"get_eligible_payment_methods","name":"Get Eligible Payment Methods","tags":["eligible","payment","methods"]},{"description":"Fetches the shipping address from a user's wallet.","id":"get_account_shipping_address","name":"Get Shipping Address","tags":["account","shipping"]}],"url":"http://localhost:8002/a2a/credentials_provider","version":"1.0.0"}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8002/a2a/credentials_provider
+
+
+[Request Body]
+{'id': 'b4c6374e-2d50-44a6-9d21-f914b9fa4611', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': '04e05cc5fe6c496f9b95c078c86617d0', 'parts': [{'kind': 'text', 'text': 'Give me the payment method credentials for the given token.'}, {'data': {'ap2.mandates.PaymentMandate': {'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'pending': None, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'dependent_locality': None, 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'sorting_code': None, 'address_line': ['123 Main St']}, 'shipping_option': None, 'payer_name': None, 'payer_email': 'bugsbunny@gmail.com', 'payer_phone': None}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+['Give me the payment method credentials for the given token.']
+
+
+[A Payment Mandate was in the request Data]
+{'payment_mandate_contents': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'payment_details_id': 'order_1', 'payment_details_total': {'label': 'Total', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'pending': None, 'refund_period': 30}, 'payment_response': {'request_id': 'order_1', 'method_name': 'CARD', 'details': {'token': {'value': 'fake_payment_credential_token_0', 'url': 'http://localhost:8002/a2a/credentials_provider'}}, 'shipping_address': {'city': 'Sample City', 'country': 'US', 'dependent_locality': None, 'organization': 'Sample Organization', 'phone_number': '+1-000-000-0000', 'postal_code': '00000', 'recipient': 'Bugs Bunny', 'region': 'ST', 'sorting_code': None, 'address_line': ['123 Main St']}, 'shipping_option': None, 'payer_name': None, 'payer_email': 'bugsbunny@gmail.com', 'payer_phone': None}, 'merchant_agent': 'Generic Merchant', 'timestamp': '2025-11-19T01:41:51.359061+00:00'}, 'user_authorization': 'fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb'}
+
+
+[Response Body]
+{"id":"b4c6374e-2d50-44a6-9d21-f914b9fa4611","jsonrpc":"2.0","result":{"artifacts":[{"artifactId":"7cd2689d-3d18-4412-ab97-6b2abbfa27a3","parts":[{"data":{"type":"CARD","alias":"American Express ending in 4444","network":[{"name":"amex","formats":["DPAN"]}],"cryptogram":"fake_cryptogram_abc123","token":"1111000000000000","card_holder_name":"John Doe","card_expiration":"12/2025","card_billing_address":{"country":"US","postal_code":"00000"}},"kind":"data"}]}],"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"04e05cc5fe6c496f9b95c078c86617d0","parts":[{"kind":"text","text":"Give me the payment method credentials for the given token."},{"data":{"ap2.mandates.PaymentMandate":{"payment_mandate_contents":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","payment_details_id":"order_1","payment_details_total":{"label":"Total","amount":{"currency":"KRW","value":25003.5},"pending":null,"refund_period":30},"payment_response":{"request_id":"order_1","method_name":"CARD","details":{"token":{"value":"fake_payment_credential_token_0","url":"http://localhost:8002/a2a/credentials_provider"}},"shipping_address":{"city":"Sample City","country":"US","dependent_locality":null,"organization":"Sample Organization","phone_number":"+1-000-000-0000","postal_code":"00000","recipient":"Bugs Bunny","region":"ST","sorting_code":null,"address_line":["123 Main St"]},"shipping_option":null,"payer_name":null,"payer_email":"bugsbunny@gmail.com","payer_phone":null},"merchant_agent":"Generic Merchant","timestamp":"2025-11-19T01:41:51.359061+00:00"},"user_authorization":"fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"}},"kind":"data"}],"role":"agent","taskId":"4c1beb21-2628-4dbe-88cf-6455e9166d8f"}],"id":"4c1beb21-2628-4dbe-88cf-6455e9166d8f","kind":"task","status":{"state":"completed","timestamp":"2025-11-19T01:43:02.361962+00:00"}}}
+
+
+
+
+---------- New Agent Request Received---------
+POST http://localhost:8002/a2a/credentials_provider
+
+
+[Request Body]
+{'id': 'd141a2d6-5527-4279-b354-c895df4c4685', 'jsonrpc': '2.0', 'method': 'message/send', 'params': {'configuration': {'acceptedOutputModes': [], 'blocking': True}, 'message': {'contextId': 'd8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d', 'kind': 'message', 'messageId': '3b0c3433f0fa41bb8557328cd7398c12', 'parts': [{'kind': 'text', 'text': 'Here is the payment receipt. No action is required.'}, {'data': {'ap2.PaymentReceipt': {'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'timestamp': '2025-11-19T01:43:02.364171+00:00', 'payment_id': 'b8b4292687484d5692042b4ec6cd7963', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'payment_status': {'merchant_confirmation_id': 'b8b4292687484d5692042b4ec6cd7963', 'psp_confirmation_id': 'b8b4292687484d5692042b4ec6cd7963', 'network_confirmation_id': None}, 'payment_method_details': {'method_name': 'CARD'}}}, 'kind': 'data'}], 'role': 'agent'}}}
+
+[Extension Header]
+X-A2A-Extensions: https://github.com/google-agentic-commerce/ap2/v1
+
+
+[Request Instructions]
+['Here is the payment receipt. No action is required.']
+
+
+[Data Part: ap2.PaymentReceipt] 
+{'payment_mandate_id': '726348364a91446aaa9a0bd27e6fe8fb', 'timestamp': '2025-11-19T01:43:02.364171+00:00', 'payment_id': 'b8b4292687484d5692042b4ec6cd7963', 'amount': {'currency': 'KRW', 'value': 25003.5}, 'payment_status': {'merchant_confirmation_id': 'b8b4292687484d5692042b4ec6cd7963', 'psp_confirmation_id': 'b8b4292687484d5692042b4ec6cd7963', 'network_confirmation_id': None}, 'payment_method_details': {'method_name': 'CARD'}}
+
+
+[Response Body]
+{"id":"d141a2d6-5527-4279-b354-c895df4c4685","jsonrpc":"2.0","result":{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"3b0c3433f0fa41bb8557328cd7398c12","parts":[{"kind":"text","text":"Here is the payment receipt. No action is required."},{"data":{"ap2.PaymentReceipt":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","timestamp":"2025-11-19T01:43:02.364171+00:00","payment_id":"b8b4292687484d5692042b4ec6cd7963","amount":{"currency":"KRW","value":25003.5},"payment_status":{"merchant_confirmation_id":"b8b4292687484d5692042b4ec6cd7963","psp_confirmation_id":"b8b4292687484d5692042b4ec6cd7963","network_confirmation_id":null},"payment_method_details":{"method_name":"CARD"}}},"kind":"data"}],"role":"agent","taskId":"d0598435-04ae-47e9-8eaf-8091f3fa0f62"}],"id":"d0598435-04ae-47e9-8eaf-8091f3fa0f62","kind":"task","status":{"state":"completed","timestamp":"2025-11-19T01:43:03.868806+00:00"}}}
+
+
+[Response Body]
+{"id":"9f1b230d-e093-4dda-8d93-ec1e2fda7e3c","jsonrpc":"2.0","result":{"artifacts":[{"artifactId":"becc611c-9a2b-4bd6-8bcf-22dcd4615d85","parts":[{"data":{"ap2.PaymentReceipt":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","timestamp":"2025-11-19T01:43:02.364171+00:00","payment_id":"b8b4292687484d5692042b4ec6cd7963","amount":{"currency":"KRW","value":25003.5},"payment_status":{"merchant_confirmation_id":"b8b4292687484d5692042b4ec6cd7963","psp_confirmation_id":"b8b4292687484d5692042b4ec6cd7963","network_confirmation_id":null},"payment_method_details":{"method_name":"CARD"}}},"kind":"data"}]}],"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"fce88af6551d4da1901e03eafb5e049c","parts":[{"kind":"text","text":"initiate_payment"},{"data":{"ap2.mandates.PaymentMandate":{"payment_mandate_contents":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","payment_details_id":"order_1","payment_details_total":{"label":"Total","amount":{"currency":"KRW","value":25003.5},"pending":null,"refund_period":30},"payment_response":{"request_id":"order_1","method_name":"CARD","details":{"token":{"value":"fake_payment_credential_token_0","url":"http://localhost:8002/a2a/credentials_provider"}},"shipping_address":{"city":"Sample City","country":"US","dependent_locality":null,"organization":"Sample Organization","phone_number":"+1-000-000-0000","postal_code":"00000","recipient":"Bugs Bunny","region":"ST","sorting_code":null,"address_line":["123 Main St"]},"shipping_option":null,"payer_name":null,"payer_email":"bugsbunny@gmail.com","payer_phone":null},"merchant_agent":"Generic Merchant","timestamp":"2025-11-19T01:41:51.359061+00:00"},"user_authorization":"fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"}},"kind":"data"},{"data":{"risk_data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"},"kind":"data"}],"role":"agent","taskId":"f93cfc7f-6f49-490a-b36a-7a96acb26189"},{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"f1119e97-d658-4208-894c-8e992f506621","parts":[{"kind":"text","text":"Please provide the challenge response to complete the payment."},{"data":{"challenge":{"type":"otp","display_text":"The payment method issuer sent a verification code to the phone number on file, please enter it below. It will be shared with the issuer so they can authorize the transaction.(Demo only hint: the code is 123)"}},"kind":"data"}],"role":"agent","taskId":"f93cfc7f-6f49-490a-b36a-7a96acb26189"},{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"7b2419880d1144b7beaeb40dcf989155","parts":[{"kind":"text","text":"initiate_payment"},{"data":{"ap2.mandates.PaymentMandate":{"payment_mandate_contents":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","payment_details_id":"order_1","payment_details_total":{"label":"Total","amount":{"currency":"KRW","value":25003.5},"pending":null,"refund_period":30},"payment_response":{"request_id":"order_1","method_name":"CARD","details":{"token":{"value":"fake_payment_credential_token_0","url":"http://localhost:8002/a2a/credentials_provider"}},"shipping_address":{"city":"Sample City","country":"US","dependent_locality":null,"organization":"Sample Organization","phone_number":"+1-000-000-0000","postal_code":"00000","recipient":"Bugs Bunny","region":"ST","sorting_code":null,"address_line":["123 Main St"]},"shipping_option":null,"payer_name":null,"payer_email":"bugsbunny@gmail.com","payer_phone":null},"merchant_agent":"Generic Merchant","timestamp":"2025-11-19T01:41:51.359061+00:00"},"user_authorization":"fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"}},"kind":"data"},{"data":{"risk_data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"},"kind":"data"},{"data":{"challenge_response":"123"},"kind":"data"}],"role":"agent","taskId":"f93cfc7f-6f49-490a-b36a-7a96acb26189"}],"id":"f93cfc7f-6f49-490a-b36a-7a96acb26189","kind":"task","status":{"message":{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"c6bf377c-9834-4ca5-bdea-e1ba0a6f257a","parts":[{"kind":"text","text":"{'status': 'success'}"}],"role":"agent","taskId":"f93cfc7f-6f49-490a-b36a-7a96acb26189"},"state":"completed","timestamp":"2025-11-19T01:43:03.872043+00:00"}}}
+
+
+[Response Body]
+{"id":"c53757da-10e0-4ef8-b40c-17489513cf78","jsonrpc":"2.0","result":{"artifacts":[{"artifactId":"65ced494-28cd-434a-a268-914a4734c664","parts":[{"data":{"ap2.PaymentReceipt":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","timestamp":"2025-11-19T01:43:02.364171+00:00","payment_id":"b8b4292687484d5692042b4ec6cd7963","amount":{"currency":"KRW","value":25003.5},"payment_status":{"merchant_confirmation_id":"b8b4292687484d5692042b4ec6cd7963","psp_confirmation_id":"b8b4292687484d5692042b4ec6cd7963","network_confirmation_id":null},"payment_method_details":{"method_name":"CARD"}}},"kind":"data"}]}],"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","history":[{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"23ea84831ef74801923808eec52fd310","parts":[{"kind":"text","text":"Initiate a payment"},{"data":{"ap2.mandates.PaymentMandate":{"payment_mandate_contents":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","payment_details_id":"order_1","payment_details_total":{"label":"Total","amount":{"currency":"KRW","value":25003.5},"refund_period":30},"payment_response":{"request_id":"order_1","method_name":"CARD","details":{"token":{"value":"fake_payment_credential_token_0","url":"http://localhost:8002/a2a/credentials_provider"}},"shipping_address":{"city":"Sample City","country":"US","organization":"Sample Organization","phone_number":"+1-000-000-0000","postal_code":"00000","recipient":"Bugs Bunny","region":"ST","address_line":["123 Main St"]},"payer_email":"bugsbunny@gmail.com"},"merchant_agent":"Generic Merchant","timestamp":"2025-11-19T01:41:51.359061+00:00"},"user_authorization":"fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"}},"kind":"data"},{"data":{"risk_data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"},"kind":"data"},{"data":{"shopping_agent_id":"trusted_shopping_agent"},"kind":"data"}],"role":"agent","taskId":"bd09d161-dd72-440f-895a-a542c257e762"},{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"f1119e97-d658-4208-894c-8e992f506621","parts":[{"kind":"text","text":"Please provide the challenge response to complete the payment."},{"data":{"challenge":{"type":"otp","display_text":"The payment method issuer sent a verification code to the phone number on file, please enter it below. It will be shared with the issuer so they can authorize the transaction.(Demo only hint: the code is 123)"}},"kind":"data"}],"role":"agent","taskId":"f93cfc7f-6f49-490a-b36a-7a96acb26189"},{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"32e3e000023d4b5ea0a26389204d3d6a","parts":[{"kind":"text","text":"Initiate a payment. Include the challenge response."},{"data":{"ap2.mandates.PaymentMandate":{"payment_mandate_contents":{"payment_mandate_id":"726348364a91446aaa9a0bd27e6fe8fb","payment_details_id":"order_1","payment_details_total":{"label":"Total","amount":{"currency":"KRW","value":25003.5},"refund_period":30},"payment_response":{"request_id":"order_1","method_name":"CARD","details":{"token":{"value":"fake_payment_credential_token_0","url":"http://localhost:8002/a2a/credentials_provider"}},"shipping_address":{"city":"Sample City","country":"US","organization":"Sample Organization","phone_number":"+1-000-000-0000","postal_code":"00000","recipient":"Bugs Bunny","region":"ST","address_line":["123 Main St"]},"payer_email":"bugsbunny@gmail.com"},"merchant_agent":"Generic Merchant","timestamp":"2025-11-19T01:41:51.359061+00:00"},"user_authorization":"fake_cart_mandate_hash_cart_1_fake_payment_mandate_hash_726348364a91446aaa9a0bd27e6fe8fb"}},"kind":"data"},{"data":{"shopping_agent_id":"trusted_shopping_agent"},"kind":"data"},{"data":{"challenge_response":"123"},"kind":"data"},{"data":{"risk_data":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...fake_risk_data"},"kind":"data"}],"role":"agent","taskId":"bd09d161-dd72-440f-895a-a542c257e762"}],"id":"bd09d161-dd72-440f-895a-a542c257e762","kind":"task","status":{"message":{"contextId":"d8c53bcb-9d9b-454a-8d8a-d9e3fa213f4d","kind":"message","messageId":"c6bf377c-9834-4ca5-bdea-e1ba0a6f257a","parts":[{"kind":"text","text":"{'status': 'success'}"}],"role":"agent","taskId":"f93cfc7f-6f49-490a-b36a-7a96acb26189"},"state":"completed","timestamp":"2025-11-19T01:43:03.874193+00:00"}}}
