@@ -121,6 +121,29 @@ Payment receipt:
 
 ---
 
+### 3. Dev UI + A2A 데모 서버 실행
+
+Python 샘플처럼 **8001 ~ 8003 포트**에 AP2 A2A 데모 에이전트가
+열리도록 스크립트를 추가했습니다. 아래 명령을 실행하면
+
+- 8001: Merchant Agent (`/a2a/merchant_agent`)
+- 8002: Credentials Provider Agent (`/a2a/credentials_provider`)
+- 8003: Merchant Payment Processor Agent (`/a2a/merchant_payment_processor_agent`)
+
+가 동시에 기동되고, 기존 Dev UI(`npm run dev`)도 8000번 포트에서 같이 열립니다.
+
+```bash
+npm run dev
+```
+
+에이전트 서버만 별도로 띄우려면 아래 명령을 사용할 수 있습니다:
+
+```bash
+npm run dev:servers
+```
+
+---
+
 ## 역할별 코드 매핑 (Python 샘플 대비)
 
 - **AP2 타입 (`src/ap2/types/*`)**

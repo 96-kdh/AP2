@@ -1,4 +1,4 @@
-import type { Message, Part, TaskUpdater } from "./a2aTypes";
+import type { Message, Part, Task, TaskStatus, TaskUpdater } from "./a2aTypes";
 
 let idCounter = 0;
 function nextMessageId(): string {
@@ -33,5 +33,34 @@ export class ConsoleTaskUpdater implements TaskUpdater {
   async failed(message: Message): Promise<void> {
     // eslint-disable-next-line no-console
     console.error("[TaskUpdater.failed]", JSON.stringify(message, null, 2));
+  }
+}
+
+/**
+ * In-memory TaskUpdater that records the completion status so that an
+ * HTTP server can return a Task payload to the caller.
+ */
+export class InMemoryTaskUpdater extends ConsoleTaskUpdater {
+  private status: TaskStatus = "PENDING";
+  private resultMessage?: Message;
+
+  override async complete(message: Message): Promise<void> {
+    this.status = "SUCCEEDED";
+    this.resultMessage = message;
+    await super.complete(message);
+  }
+
+  override async failed(message: Message): Promise<void> {
+    this.status = "FAILED";
+    this.resultMessage = message;
+    await super.failed(message);
+  }
+
+  toTask(taskId?: string): Task {
+    return {
+      id: taskId ?? `task-${Date.now()}`,
+      status: this.status,
+      resultMessage: this.resultMessage,
+    };
   }
 }
