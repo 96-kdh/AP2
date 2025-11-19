@@ -82,6 +82,11 @@ ap2-ts-sample/
 
 ### 1. 의존성 설치
 
+`.env` 파일을 프로젝트 루트(`AP2/.env` 또는 `AP2/samples/js/.env`)에 두고,
+`GOOGLE_GENAI_API_KEY` 또는 `GEMINI_API_KEY` 값을 채워주세요. 이미 `GOOGLE_API_KEY`
+로만 저장해두었다면 런타임에서 자동으로 `GOOGLE_GENAI_API_KEY`/`GEMINI_API_KEY`
+로 매핑됩니다.
+
 ```bash
 npm install
 ```

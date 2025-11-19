@@ -1,7 +1,10 @@
 import { spawn } from "child_process";
+import { loadEnv } from "./common/env";
 import { startAgentServers } from "./servers";
 
 async function main(): Promise<void> {
+  loadEnv();
+
   const { stopAll } = await startAgentServers();
 
   const devtools = spawn("npx", ["@google/adk-devtools", "web", "."], {

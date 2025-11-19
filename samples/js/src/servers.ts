@@ -1,4 +1,5 @@
 import http from "http";
+import { loadEnv } from "./common/env";
 import { MerchantAgentExecutor } from "./roles/merchant_agent/agentExecutor";
 import { MerchantPaymentProcessorExecutor } from "./roles/merchant_payment_processor_agent/agentExecutor";
 import { CredentialsProviderExecutor } from "./roles/credentials_provider_agent/agentExecutor";
@@ -137,6 +138,8 @@ async function closeServer(server: StartedServer): Promise<void> {
 }
 
 export async function startAgentServers(): Promise<{ stopAll: () => Promise<void> }> {
+  loadEnv();
+
   const configs: AgentServerConfig[] = [
     {
       name: "Merchant Agent",
