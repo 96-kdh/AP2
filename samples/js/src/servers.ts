@@ -1,12 +1,11 @@
 import http from "http";
-import { loadEnv } from "./common/env";
 import { MerchantAgentExecutor } from "./roles/merchant_agent/agentExecutor";
 import { MerchantPaymentProcessorExecutor } from "./roles/merchant_payment_processor_agent/agentExecutor";
 import { CredentialsProviderExecutor } from "./roles/credentials_provider_agent/agentExecutor";
 import type { BaseServerExecutor } from "./common/baseServerExecutor";
 import type { Message, Part, Task } from "./common/a2aTypes";
 import { InMemoryTaskUpdater } from "./common/simpleTaskUpdater";
-import { PAYMENT_MANDATE_DATA_KEY, PAYMENT_RECEIPT_DATA_KEY } from "./ap2/types/constants";
+import { PAYMENT_MANDATE_DATA_KEY, PAYMENT_RECEIPT_DATA_KEY } from "./ap2/types";
 
 interface AgentCard {
   name: string;
@@ -214,8 +213,6 @@ async function closeServer(server: StartedServer): Promise<void> {
 }
 
 export async function startAgentServers(): Promise<{ stopAll: () => Promise<void> }> {
-  loadEnv();
-
   const configs: AgentServerConfig[] = [
     {
       name: "Merchant Agent",
