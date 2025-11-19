@@ -5,7 +5,7 @@ import {
   buildCartMandate,
   buildPaymentMandate,
 } from "./tools";
-import { initiatePaymentFromMandate } from "../merchant_agent/tools";
+import { dispatchPaymentMandate } from "./remoteAgents";
 
 export interface CheckoutInput {
   description: string;
@@ -21,7 +21,7 @@ export interface CheckoutInput {
  * 3) PaymentMandate 생성
  * 4) Merchant + Payment Processor 로 결제 실행
  */
-export function runCardCheckoutFromLLM(input: CheckoutInput): PaymentReceipt {
+export async function runCardCheckoutFromLLM(input: CheckoutInput): Promise<PaymentReceipt> {
   const merchantName = "Demo Merchant";
 
   const intent = buildIntentMandate(input.description, merchantName);
@@ -34,7 +34,7 @@ export function runCardCheckoutFromLLM(input: CheckoutInput): PaymentReceipt {
   const cart = buildCartMandate(intent, merchantName, total);
   const paymentMandate = buildPaymentMandate(cart, "CARD");
 
-  const receipt = initiatePaymentFromMandate(
+  const receipt = await dispatchPaymentMandate(
     paymentMandate,
     !!input.debug_mode,
   );
